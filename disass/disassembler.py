@@ -65,49 +65,20 @@ class Disassembler(object):
             if insn.id == arch[self.arch][2]:
                 self.end = self.rip + self.start
             return(insn.address, insn.mnemonic, op[0], op[1])
-        
-    def _decode_istruction(self):
-        # Editme
-        ''' Decode a single istruction '''
-        op = [ None, None, None ]
-        insn = self.md.disasm(self.executable[self.rip:self.rip+16],
-                      self.rip + self.start)
-        insn = next(insn)
-        self.rip += insn.size
-        for x in range(len(insn.operands)):
-            op[x] = insn.operands[x]
-        self.byte += insn.bytes
-        self.istruction.append((insn.address,insn.mnemonic, insn.op_str))
-        if insn.id == X86_INS_RET:
-            self.end = self.rip + self.start
-        return (insn.address,insn.mnemonic, insn.op_str)
-
-    def decoder(self):
-        while self.rip != (self.end - self.start):
-            self._decode_operandos()
-        
-    def decoder_iterable(self):
+       
+    def decode(self):
         while self.rip != (self.end - self.start):
             yield self._decode_operandos()
             
-    def decoder_op_iterable(self):
-        # Editme
-        while self.rip != (self.end - self.start):
-            yield self._decode_operandos()
-    
     def store_istruction(self, store_file):
         ''' Save all istruction as string'''
         string_istruction = ''
-        for add, mn, op0, op1 in self.decoder_iterable():
+        for add, mn, op0, op1 in self.decode():
             string_istruction += "0x{0:x}\t{1}\t{2}, {3}\n".format(add, mn, op0, op1)
             open(store_file, 'wb').write(string_istruction)
 
-    def store_byte(self, store_file):
-        # Editme
-        open(store_file, 'wb').write(self.byte)            
-
     def __str__(self):
         string_istruction = ''
-        for add, mn, op0, op1 in self.decoder_iterable():
+        for add, mn, op0, op1 in self.decode():
             string_istruction += "0x{0:x}\t{1}\t{2}, {3}\n".format(add, mn, op0, op1)
         return string_istruction
