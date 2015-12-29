@@ -1,0 +1,1862 @@
+0x8048484	and	ebp, edi
+0x8048486	and	ebp, 0x1
+0x8048489	mov	[esp + arg_3c8], eax
+0x8048490	mov	eax, edx
+0x8048492	and	eax, ebx
+0x8048494	and	eax, 0x1
+0x8048497	mov	[esp + arg_3c4], eax
+0x804849e	mov	eax, esi
+0x80484a0	and	eax, ebx
+0x80484a2	and	eax, 0x0
+0x80484a5	mov	[esp + arg_3c0], eax
+0x80484ac	mov	eax, edx
+0x80484ae	and	eax, edi
+0x80484b0	and	eax, 0x0
+0x80484b3	mov	[esp + arg_3bc], eax
+0x80484ba	mov	eax, [esp + arg_3c4]
+0x80484c1	or	ebp, eax
+0x80484c3	mov	eax, [esp + arg_3c0]
+0x80484ca	mov	[esp + arg_3b8], ecx
+0x80484d1	mov	ecx, [esp + arg_3bc]
+0x80484d8	or	eax, ecx
+0x80484da	or	ebp, eax
+0x80484dc	and	esi, edi
+0x80484de	and	esi, 0x0
+0x80484e1	mov	eax, edx
+0x80484e3	and	eax, ebx
+0x80484e5	and	eax, 0x0
+0x80484e8	mov	ecx, edx
+0x80484ea	and	ecx, edi
+0x80484ec	and	ecx, 0x1
+0x80484ef	and	edx, edi
+0x80484f1	and	edx, 0x0
+0x80484f4	or	esi, eax
+0x80484f6	or	ecx, edx
+0x80484f8	or	esi, ecx
+0x80484fa	mov	eax, esi
+0x80484fc	xor	eax, 0x1
+0x80484ff	mov	ecx, [esp + arg_3b8]
+0x8048506	shr	ecx, 0x1
+0x8048508	and	ecx, 0x1
+0x804850b	mov	edx, ecx
+0x804850d	xor	edx, 0x1
+0x8048510	mov	edi, [esp + arg_3c8]
+0x8048517	shr	edi, 0x1
+0x8048519	and	edi, 0x1
+0x804851c	mov	ebx, edi
+0x804851e	xor	ebx, 0x1
+0x8048521	mov	[esp + arg_3b4], eax
+0x8048528	mov	eax, edx
+0x804852a	and	eax, edi
+0x804852c	mov	[esp + arg_3b0], ecx
+0x8048533	mov	ecx, [esp + arg_3b4]
+0x804853a	and	eax, ecx
+0x804853c	mov	ecx, [esp + arg_3b0]
+0x8048543	and	ecx, ebx
+0x8048545	mov	[esp + arg_3ac], eax
+0x804854c	mov	eax, [esp + arg_3b4]
+0x8048553	and	ecx, eax
+0x8048555	mov	eax, edx
+0x8048557	and	eax, ebx
+0x8048559	and	eax, esi
+0x804855b	mov	[esp + arg_3a8], eax
+0x8048562	mov	eax, [esp + arg_3b0]
+0x8048569	and	eax, edi
+0x804856b	and	eax, esi
+0x804856d	mov	[esp + arg_3a4], eax
+0x8048574	mov	eax, [esp + arg_3ac]
+0x804857b	or	eax, ecx
+0x804857d	mov	ecx, [esp + arg_3a8]
+0x8048584	mov	[esp + arg_3a0], eax
+0x804858b	mov	eax, [esp + arg_3a4]
+0x8048592	or	ecx, eax
+0x8048594	mov	eax, [esp + arg_3a0]
+0x804859b	or	eax, ecx
+0x804859d	and	edx, edi
+0x804859f	and	edx, esi
+0x80485a1	mov	ecx, [esp + arg_3b0]
+0x80485a8	and	ecx, ebx
+0x80485aa	and	ecx, esi
+0x80485ac	mov	ebx, [esp + arg_3b0]
+0x80485b3	and	ebx, edi
+0x80485b5	mov	[esp + arg_39c], eax
+0x80485bc	mov	eax, [esp + arg_3b4]
+0x80485c3	and	ebx, eax
+0x80485c5	mov	eax, [esp + arg_3b0]
+0x80485cc	and	eax, edi
+0x80485ce	and	eax, esi
+0x80485d0	or	edx, ecx
+0x80485d2	or	ebx, eax
+0x80485d4	or	edx, ebx
+0x80485d6	mov	eax, edx
+0x80485d8	xor	eax, 0x1
+0x80485db	mov	ecx, [esp + arg_3b8]
+0x80485e2	shr	ecx, 0x2
+0x80485e5	and	ecx, 0x1
+0x80485e8	mov	esi, ecx
+0x80485ea	xor	esi, 0x1
+0x80485ed	mov	edi, [esp + arg_3c8]
+0x80485f4	shr	edi, 0x2
+0x80485f7	and	edi, 0x1
+0x80485fa	mov	ebx, edi
+0x80485fc	xor	ebx, 0x1
+0x80485ff	mov	[esp + arg_398], eax
+0x8048606	mov	eax, esi
+0x8048608	and	eax, edi
+0x804860a	mov	[esp + arg_394], ecx
+0x8048611	mov	ecx, [esp + arg_398]
+0x8048618	and	eax, ecx
+0x804861a	mov	ecx, [esp + arg_394]
+0x8048621	and	ecx, ebx
+0x8048623	mov	[esp + arg_390], eax
+0x804862a	mov	eax, [esp + arg_398]
+0x8048631	and	ecx, eax
+0x8048633	mov	eax, esi
+0x8048635	and	eax, ebx
+0x8048637	and	eax, edx
+0x8048639	mov	[esp + arg_38c], eax
+0x8048640	mov	eax, [esp + arg_394]
+0x8048647	and	eax, edi
+0x8048649	and	eax, edx
+0x804864b	mov	[esp + arg_388], eax
+0x8048652	mov	eax, [esp + arg_390]
+0x8048659	or	eax, ecx
+0x804865b	mov	ecx, [esp + arg_38c]
+0x8048662	mov	[esp + arg_384], eax
+0x8048669	mov	eax, [esp + arg_388]
+0x8048670	or	ecx, eax
+0x8048672	mov	eax, [esp + arg_384]
+0x8048679	or	eax, ecx
+0x804867b	and	esi, edi
+0x804867d	and	esi, edx
+0x804867f	mov	ecx, [esp + arg_394]
+0x8048686	and	ecx, ebx
+0x8048688	and	ecx, edx
+0x804868a	mov	ebx, [esp + arg_394]
+0x8048691	and	ebx, edi
+0x8048693	mov	[esp + arg_380], eax
+0x804869a	mov	eax, [esp + arg_398]
+0x80486a1	and	ebx, eax
+0x80486a3	mov	eax, [esp + arg_394]
+0x80486aa	and	eax, edi
+0x80486ac	and	eax, edx
+0x80486ae	or	esi, ecx
+0x80486b0	or	ebx, eax
+0x80486b2	or	esi, ebx
+0x80486b4	mov	eax, esi
+0x80486b6	xor	eax, 0x1
+0x80486b9	mov	ecx, [esp + arg_3b8]
+0x80486c0	shr	ecx, 0x3
+0x80486c3	and	ecx, 0x1
+0x80486c6	mov	edx, ecx
+0x80486c8	xor	edx, 0x1
+0x80486cb	mov	edi, [esp + arg_3c8]
+0x80486d2	shr	edi, 0x3
+0x80486d5	and	edi, 0x1
+0x80486d8	mov	ebx, edi
+0x80486da	xor	ebx, 0x1
+0x80486dd	mov	[esp + arg_37c], eax
+0x80486e4	mov	eax, edx
+0x80486e6	and	eax, edi
+0x80486e8	mov	[esp + arg_378], ecx
+0x80486ef	mov	ecx, [esp + arg_37c]
+0x80486f6	and	eax, ecx
+0x80486f8	mov	ecx, [esp + arg_378]
+0x80486ff	and	ecx, ebx
+0x8048701	mov	[esp + arg_374], eax
+0x8048708	mov	eax, [esp + arg_37c]
+0x804870f	and	ecx, eax
+0x8048711	mov	eax, edx
+0x8048713	and	eax, ebx
+0x8048715	and	eax, esi
+0x8048717	mov	[esp + arg_370], eax
+0x804871e	mov	eax, [esp + arg_378]
+0x8048725	and	eax, edi
+0x8048727	and	eax, esi
+0x8048729	mov	[esp + arg_36c], eax
+0x8048730	mov	eax, [esp + arg_374]
+0x8048737	or	eax, ecx
+0x8048739	mov	ecx, [esp + arg_370]
+0x8048740	mov	[esp + arg_368], eax
+0x8048747	mov	eax, [esp + arg_36c]
+0x804874e	or	ecx, eax
+0x8048750	mov	eax, [esp + arg_368]
+0x8048757	or	eax, ecx
+0x8048759	and	edx, edi
+0x804875b	and	edx, esi
+0x804875d	mov	ecx, [esp + arg_378]
+0x8048764	and	ecx, ebx
+0x8048766	and	ecx, esi
+0x8048768	mov	ebx, [esp + arg_378]
+0x804876f	and	ebx, edi
+0x8048771	mov	[esp + arg_364], eax
+0x8048778	mov	eax, [esp + arg_37c]
+0x804877f	and	ebx, eax
+0x8048781	mov	eax, [esp + arg_378]
+0x8048788	and	eax, edi
+0x804878a	and	eax, esi
+0x804878c	or	edx, ecx
+0x804878e	or	ebx, eax
+0x8048790	or	edx, ebx
+0x8048792	mov	eax, edx
+0x8048794	xor	eax, 0x1
+0x8048797	mov	ecx, [esp + arg_3b8]
+0x804879e	shr	ecx, 0x4
+0x80487a1	and	ecx, 0x1
+0x80487a4	mov	esi, ecx
+0x80487a6	xor	esi, 0x1
+0x80487a9	mov	edi, [esp + arg_3c8]
+0x80487b0	shr	edi, 0x4
+0x80487b3	and	edi, 0x1
+0x80487b6	mov	ebx, edi
+0x80487b8	xor	ebx, 0x1
+0x80487bb	mov	[esp + arg_360], eax
+0x80487c2	mov	eax, esi
+0x80487c4	and	eax, edi
+0x80487c6	mov	[esp + arg_35c], ecx
+0x80487cd	mov	ecx, [esp + arg_360]
+0x80487d4	and	eax, ecx
+0x80487d6	mov	ecx, [esp + arg_35c]
+0x80487dd	and	ecx, ebx
+0x80487df	mov	[esp + arg_358], eax
+0x80487e6	mov	eax, [esp + arg_360]
+0x80487ed	and	ecx, eax
+0x80487ef	mov	eax, esi
+0x80487f1	and	eax, ebx
+0x80487f3	and	eax, edx
+0x80487f5	mov	[esp + arg_354], eax
+0x80487fc	mov	eax, [esp + arg_35c]
+0x8048803	and	eax, edi
+0x8048805	and	eax, edx
+0x8048807	mov	[esp + arg_350], eax
+0x804880e	mov	eax, [esp + arg_358]
+0x8048815	or	eax, ecx
+0x8048817	mov	ecx, [esp + arg_354]
+0x804881e	mov	[esp + arg_34c], eax
+0x8048825	mov	eax, [esp + arg_350]
+0x804882c	or	ecx, eax
+0x804882e	mov	eax, [esp + arg_34c]
+0x8048835	or	eax, ecx
+0x8048837	and	esi, edi
+0x8048839	and	esi, edx
+0x804883b	mov	ecx, [esp + arg_35c]
+0x8048842	and	ecx, ebx
+0x8048844	and	ecx, edx
+0x8048846	mov	ebx, [esp + arg_35c]
+0x804884d	and	ebx, edi
+0x804884f	mov	[esp + arg_348], eax
+0x8048856	mov	eax, [esp + arg_360]
+0x804885d	and	ebx, eax
+0x804885f	mov	eax, [esp + arg_35c]
+0x8048866	and	eax, edi
+0x8048868	and	eax, edx
+0x804886a	or	esi, ecx
+0x804886c	or	ebx, eax
+0x804886e	or	esi, ebx
+0x8048870	mov	eax, esi
+0x8048872	xor	eax, 0x1
+0x8048875	mov	ecx, [esp + arg_3b8]
+0x804887c	shr	ecx, 0x5
+0x804887f	and	ecx, 0x1
+0x8048882	mov	edx, ecx
+0x8048884	xor	edx, 0x1
+0x8048887	mov	edi, [esp + arg_3c8]
+0x804888e	shr	edi, 0x5
+0x8048891	and	edi, 0x1
+0x8048894	mov	ebx, edi
+0x8048896	xor	ebx, 0x1
+0x8048899	mov	[esp + arg_344], eax
+0x80488a0	mov	eax, edx
+0x80488a2	and	eax, edi
+0x80488a4	mov	[esp + arg_340], ecx
+0x80488ab	mov	ecx, [esp + arg_344]
+0x80488b2	and	eax, ecx
+0x80488b4	mov	ecx, [esp + arg_340]
+0x80488bb	and	ecx, ebx
+0x80488bd	mov	[esp + arg_33c], eax
+0x80488c4	mov	eax, [esp + arg_344]
+0x80488cb	and	ecx, eax
+0x80488cd	mov	eax, edx
+0x80488cf	and	eax, ebx
+0x80488d1	and	eax, esi
+0x80488d3	mov	[esp + arg_338], eax
+0x80488da	mov	eax, [esp + arg_340]
+0x80488e1	and	eax, edi
+0x80488e3	and	eax, esi
+0x80488e5	mov	[esp + arg_334], eax
+0x80488ec	mov	eax, [esp + arg_33c]
+0x80488f3	or	eax, ecx
+0x80488f5	mov	ecx, [esp + arg_338]
+0x80488fc	mov	[esp + arg_330], eax
+0x8048903	mov	eax, [esp + arg_334]
+0x804890a	or	ecx, eax
+0x804890c	mov	eax, [esp + arg_330]
+0x8048913	or	eax, ecx
+0x8048915	and	edx, edi
+0x8048917	and	edx, esi
+0x8048919	mov	ecx, [esp + arg_340]
+0x8048920	and	ecx, ebx
+0x8048922	and	ecx, esi
+0x8048924	mov	ebx, [esp + arg_340]
+0x804892b	and	ebx, edi
+0x804892d	mov	[esp + arg_32c], eax
+0x8048934	mov	eax, [esp + arg_344]
+0x804893b	and	ebx, eax
+0x804893d	mov	eax, [esp + arg_340]
+0x8048944	and	eax, edi
+0x8048946	and	eax, esi
+0x8048948	or	edx, ecx
+0x804894a	or	ebx, eax
+0x804894c	or	edx, ebx
+0x804894e	mov	eax, edx
+0x8048950	xor	eax, 0x1
+0x8048953	mov	ecx, [esp + arg_3b8]
+0x804895a	shr	ecx, 0x6
+0x804895d	and	ecx, 0x1
+0x8048960	mov	esi, ecx
+0x8048962	xor	esi, 0x1
+0x8048965	mov	edi, [esp + arg_3c8]
+0x804896c	shr	edi, 0x6
+0x804896f	and	edi, 0x1
+0x8048972	mov	ebx, edi
+0x8048974	xor	ebx, 0x1
+0x8048977	mov	[esp + arg_328], eax
+0x804897e	mov	eax, esi
+0x8048980	and	eax, edi
+0x8048982	mov	[esp + arg_324], ecx
+0x8048989	mov	ecx, [esp + arg_328]
+0x8048990	and	eax, ecx
+0x8048992	mov	ecx, [esp + arg_324]
+0x8048999	and	ecx, ebx
+0x804899b	mov	[esp + arg_320], eax
+0x80489a2	mov	eax, [esp + arg_328]
+0x80489a9	and	ecx, eax
+0x80489ab	mov	eax, esi
+0x80489ad	and	eax, ebx
+0x80489af	and	eax, edx
+0x80489b1	mov	[esp + arg_31c], eax
+0x80489b8	mov	eax, [esp + arg_324]
+0x80489bf	and	eax, edi
+0x80489c1	and	eax, edx
+0x80489c3	mov	[esp + arg_318], eax
+0x80489ca	mov	eax, [esp + arg_320]
+0x80489d1	or	eax, ecx
+0x80489d3	mov	ecx, [esp + arg_31c]
+0x80489da	mov	[esp + arg_314], eax
+0x80489e1	mov	eax, [esp + arg_318]
+0x80489e8	or	ecx, eax
+0x80489ea	mov	eax, [esp + arg_314]
+0x80489f1	or	eax, ecx
+0x80489f3	and	esi, edi
+0x80489f5	and	esi, edx
+0x80489f7	mov	ecx, [esp + arg_324]
+0x80489fe	and	ecx, ebx
+0x8048a00	and	ecx, edx
+0x8048a02	mov	ebx, [esp + arg_324]
+0x8048a09	and	ebx, edi
+0x8048a0b	mov	[esp + arg_310], eax
+0x8048a12	mov	eax, [esp + arg_328]
+0x8048a19	and	ebx, eax
+0x8048a1b	mov	eax, [esp + arg_324]
+0x8048a22	and	eax, edi
+0x8048a24	and	eax, edx
+0x8048a26	or	esi, ecx
+0x8048a28	or	ebx, eax
+0x8048a2a	or	esi, ebx
+0x8048a2c	mov	eax, esi
+0x8048a2e	xor	eax, 0x1
+0x8048a31	mov	ecx, [esp + arg_3b8]
+0x8048a38	shr	ecx, 0x7
+0x8048a3b	and	ecx, 0x1
+0x8048a3e	mov	edx, ecx
+0x8048a40	xor	edx, 0x1
+0x8048a43	mov	edi, [esp + arg_3c8]
+0x8048a4a	shr	edi, 0x7
+0x8048a4d	and	edi, 0x1
+0x8048a50	mov	ebx, edi
+0x8048a52	xor	ebx, 0x1
+0x8048a55	mov	[esp + arg_30c], eax
+0x8048a5c	mov	eax, edx
+0x8048a5e	and	eax, edi
+0x8048a60	mov	[esp + arg_308], ecx
+0x8048a67	mov	ecx, [esp + arg_30c]
+0x8048a6e	and	eax, ecx
+0x8048a70	mov	ecx, [esp + arg_308]
+0x8048a77	and	ecx, ebx
+0x8048a79	mov	[esp + arg_304], eax
+0x8048a80	mov	eax, [esp + arg_30c]
+0x8048a87	and	ecx, eax
+0x8048a89	mov	eax, edx
+0x8048a8b	and	eax, ebx
+0x8048a8d	and	eax, esi
+0x8048a8f	mov	[esp + arg_300], eax
+0x8048a96	mov	eax, [esp + arg_308]
+0x8048a9d	and	eax, edi
+0x8048a9f	and	eax, esi
+0x8048aa1	mov	[esp + arg_2fc], eax
+0x8048aa8	mov	eax, [esp + arg_304]
+0x8048aaf	or	eax, ecx
+0x8048ab1	mov	ecx, [esp + arg_300]
+0x8048ab8	mov	[esp + arg_2f8], eax
+0x8048abf	mov	eax, [esp + arg_2fc]
+0x8048ac6	or	ecx, eax
+0x8048ac8	mov	eax, [esp + arg_2f8]
+0x8048acf	or	eax, ecx
+0x8048ad1	and	edx, edi
+0x8048ad3	and	edx, esi
+0x8048ad5	mov	ecx, [esp + arg_308]
+0x8048adc	and	ecx, ebx
+0x8048ade	and	ecx, esi
+0x8048ae0	mov	ebx, [esp + arg_308]
+0x8048ae7	and	ebx, edi
+0x8048ae9	mov	[esp + arg_2f4], eax
+0x8048af0	mov	eax, [esp + arg_30c]
+0x8048af7	and	ebx, eax
+0x8048af9	mov	eax, [esp + arg_308]
+0x8048b00	and	eax, edi
+0x8048b02	and	eax, esi
+0x8048b04	or	edx, ecx
+0x8048b06	or	ebx, eax
+0x8048b08	or	edx, ebx
+0x8048b0a	mov	eax, edx
+0x8048b0c	xor	eax, 0x1
+0x8048b0f	mov	ecx, [esp + arg_3b8]
+0x8048b16	shr	ecx, 0x8
+0x8048b19	and	ecx, 0x1
+0x8048b1c	mov	esi, ecx
+0x8048b1e	xor	esi, 0x1
+0x8048b21	mov	edi, [esp + arg_3c8]
+0x8048b28	shr	edi, 0x8
+0x8048b2b	and	edi, 0x1
+0x8048b2e	mov	ebx, edi
+0x8048b30	xor	ebx, 0x1
+0x8048b33	mov	[esp + arg_2f0], eax
+0x8048b3a	mov	eax, esi
+0x8048b3c	and	eax, edi
+0x8048b3e	mov	[esp + arg_2ec], ecx
+0x8048b45	mov	ecx, [esp + arg_2f0]
+0x8048b4c	and	eax, ecx
+0x8048b4e	mov	ecx, [esp + arg_2ec]
+0x8048b55	and	ecx, ebx
+0x8048b57	mov	[esp + arg_2e8], eax
+0x8048b5e	mov	eax, [esp + arg_2f0]
+0x8048b65	and	ecx, eax
+0x8048b67	mov	eax, esi
+0x8048b69	and	eax, ebx
+0x8048b6b	and	eax, edx
+0x8048b6d	mov	[esp + arg_2e4], eax
+0x8048b74	mov	eax, [esp + arg_2ec]
+0x8048b7b	and	eax, edi
+0x8048b7d	and	eax, edx
+0x8048b7f	mov	[esp + arg_2e0], eax
+0x8048b86	mov	eax, [esp + arg_2e8]
+0x8048b8d	or	eax, ecx
+0x8048b8f	mov	ecx, [esp + arg_2e4]
+0x8048b96	mov	[esp + arg_2dc], eax
+0x8048b9d	mov	eax, [esp + arg_2e0]
+0x8048ba4	or	ecx, eax
+0x8048ba6	mov	eax, [esp + arg_2dc]
+0x8048bad	or	eax, ecx
+0x8048baf	and	esi, edi
+0x8048bb1	and	esi, edx
+0x8048bb3	mov	ecx, [esp + arg_2ec]
+0x8048bba	and	ecx, ebx
+0x8048bbc	and	ecx, edx
+0x8048bbe	mov	ebx, [esp + arg_2ec]
+0x8048bc5	and	ebx, edi
+0x8048bc7	mov	[esp + arg_2d8], eax
+0x8048bce	mov	eax, [esp + arg_2f0]
+0x8048bd5	and	ebx, eax
+0x8048bd7	mov	eax, [esp + arg_2ec]
+0x8048bde	and	eax, edi
+0x8048be0	and	eax, edx
+0x8048be2	or	esi, ecx
+0x8048be4	or	ebx, eax
+0x8048be6	or	esi, ebx
+0x8048be8	mov	eax, esi
+0x8048bea	xor	eax, 0x1
+0x8048bed	mov	ecx, [esp + arg_3b8]
+0x8048bf4	shr	ecx, 0x9
+0x8048bf7	and	ecx, 0x1
+0x8048bfa	mov	edx, ecx
+0x8048bfc	xor	edx, 0x1
+0x8048bff	mov	edi, [esp + arg_3c8]
+0x8048c06	shr	edi, 0x9
+0x8048c09	and	edi, 0x1
+0x8048c0c	mov	ebx, edi
+0x8048c0e	xor	ebx, 0x1
+0x8048c11	mov	[esp + arg_2d4], eax
+0x8048c18	mov	eax, edx
+0x8048c1a	and	eax, edi
+0x8048c1c	mov	[esp + arg_2d0], ecx
+0x8048c23	mov	ecx, [esp + arg_2d4]
+0x8048c2a	and	eax, ecx
+0x8048c2c	mov	ecx, [esp + arg_2d0]
+0x8048c33	and	ecx, ebx
+0x8048c35	mov	[esp + arg_2cc], eax
+0x8048c3c	mov	eax, [esp + arg_2d4]
+0x8048c43	and	ecx, eax
+0x8048c45	mov	eax, edx
+0x8048c47	and	eax, ebx
+0x8048c49	and	eax, esi
+0x8048c4b	mov	[esp + arg_2c8], eax
+0x8048c52	mov	eax, [esp + arg_2d0]
+0x8048c59	and	eax, edi
+0x8048c5b	and	eax, esi
+0x8048c5d	mov	[esp + arg_2c4], eax
+0x8048c64	mov	eax, [esp + arg_2cc]
+0x8048c6b	or	eax, ecx
+0x8048c6d	mov	ecx, [esp + arg_2c8]
+0x8048c74	mov	[esp + arg_2c0], eax
+0x8048c7b	mov	eax, [esp + arg_2c4]
+0x8048c82	or	ecx, eax
+0x8048c84	mov	eax, [esp + arg_2c0]
+0x8048c8b	or	eax, ecx
+0x8048c8d	and	edx, edi
+0x8048c8f	and	edx, esi
+0x8048c91	mov	ecx, [esp + arg_2d0]
+0x8048c98	and	ecx, ebx
+0x8048c9a	and	ecx, esi
+0x8048c9c	mov	ebx, [esp + arg_2d0]
+0x8048ca3	and	ebx, edi
+0x8048ca5	mov	[esp + arg_2bc], eax
+0x8048cac	mov	eax, [esp + arg_2d4]
+0x8048cb3	and	ebx, eax
+0x8048cb5	mov	eax, [esp + arg_2d0]
+0x8048cbc	and	eax, edi
+0x8048cbe	and	eax, esi
+0x8048cc0	or	edx, ecx
+0x8048cc2	or	ebx, eax
+0x8048cc4	or	edx, ebx
+0x8048cc6	mov	eax, edx
+0x8048cc8	xor	eax, 0x1
+0x8048ccb	mov	ecx, [esp + arg_3b8]
+0x8048cd2	shr	ecx, 0xa
+0x8048cd5	and	ecx, 0x1
+0x8048cd8	mov	esi, ecx
+0x8048cda	xor	esi, 0x1
+0x8048cdd	mov	edi, [esp + arg_3c8]
+0x8048ce4	shr	edi, 0xa
+0x8048ce7	and	edi, 0x1
+0x8048cea	mov	ebx, edi
+0x8048cec	xor	ebx, 0x1
+0x8048cef	mov	[esp + arg_2b8], eax
+0x8048cf6	mov	eax, esi
+0x8048cf8	and	eax, edi
+0x8048cfa	mov	[esp + arg_2b4], ecx
+0x8048d01	mov	ecx, [esp + arg_2b8]
+0x8048d08	and	eax, ecx
+0x8048d0a	mov	ecx, [esp + arg_2b4]
+0x8048d11	and	ecx, ebx
+0x8048d13	mov	[esp + arg_2b0], eax
+0x8048d1a	mov	eax, [esp + arg_2b8]
+0x8048d21	and	ecx, eax
+0x8048d23	mov	eax, esi
+0x8048d25	and	eax, ebx
+0x8048d27	and	eax, edx
+0x8048d29	mov	[esp + arg_2ac], eax
+0x8048d30	mov	eax, [esp + arg_2b4]
+0x8048d37	and	eax, edi
+0x8048d39	and	eax, edx
+0x8048d3b	mov	[esp + arg_2a8], eax
+0x8048d42	mov	eax, [esp + arg_2b0]
+0x8048d49	or	eax, ecx
+0x8048d4b	mov	ecx, [esp + arg_2ac]
+0x8048d52	mov	[esp + arg_2a4], eax
+0x8048d59	mov	eax, [esp + arg_2a8]
+0x8048d60	or	ecx, eax
+0x8048d62	mov	eax, [esp + arg_2a4]
+0x8048d69	or	eax, ecx
+0x8048d6b	and	esi, edi
+0x8048d6d	and	esi, edx
+0x8048d6f	mov	ecx, [esp + arg_2b4]
+0x8048d76	and	ecx, ebx
+0x8048d78	and	ecx, edx
+0x8048d7a	mov	ebx, [esp + arg_2b4]
+0x8048d81	and	ebx, edi
+0x8048d83	mov	[esp + arg_2a0], eax
+0x8048d8a	mov	eax, [esp + arg_2b8]
+0x8048d91	and	ebx, eax
+0x8048d93	mov	eax, [esp + arg_2b4]
+0x8048d9a	and	eax, edi
+0x8048d9c	and	eax, edx
+0x8048d9e	or	esi, ecx
+0x8048da0	or	ebx, eax
+0x8048da2	or	esi, ebx
+0x8048da4	mov	eax, esi
+0x8048da6	xor	eax, 0x1
+0x8048da9	mov	ecx, [esp + arg_3b8]
+0x8048db0	shr	ecx, 0xb
+0x8048db3	and	ecx, 0x1
+0x8048db6	mov	edx, ecx
+0x8048db8	xor	edx, 0x1
+0x8048dbb	mov	edi, [esp + arg_3c8]
+0x8048dc2	shr	edi, 0xb
+0x8048dc5	and	edi, 0x1
+0x8048dc8	mov	ebx, edi
+0x8048dca	xor	ebx, 0x1
+0x8048dcd	mov	[esp + arg_29c], eax
+0x8048dd4	mov	eax, edx
+0x8048dd6	and	eax, edi
+0x8048dd8	mov	[esp + arg_298], ecx
+0x8048ddf	mov	ecx, [esp + arg_29c]
+0x8048de6	and	eax, ecx
+0x8048de8	mov	ecx, [esp + arg_298]
+0x8048def	and	ecx, ebx
+0x8048df1	mov	[esp + arg_294], eax
+0x8048df8	mov	eax, [esp + arg_29c]
+0x8048dff	and	ecx, eax
+0x8048e01	mov	eax, edx
+0x8048e03	and	eax, ebx
+0x8048e05	and	eax, esi
+0x8048e07	mov	[esp + arg_290], eax
+0x8048e0e	mov	eax, [esp + arg_298]
+0x8048e15	and	eax, edi
+0x8048e17	and	eax, esi
+0x8048e19	mov	[esp + arg_28c], eax
+0x8048e20	mov	eax, [esp + arg_294]
+0x8048e27	or	eax, ecx
+0x8048e29	mov	ecx, [esp + arg_290]
+0x8048e30	mov	[esp + arg_288], eax
+0x8048e37	mov	eax, [esp + arg_28c]
+0x8048e3e	or	ecx, eax
+0x8048e40	mov	eax, [esp + arg_288]
+0x8048e47	or	eax, ecx
+0x8048e49	and	edx, edi
+0x8048e4b	and	edx, esi
+0x8048e4d	mov	ecx, [esp + arg_298]
+0x8048e54	and	ecx, ebx
+0x8048e56	and	ecx, esi
+0x8048e58	mov	ebx, [esp + arg_298]
+0x8048e5f	and	ebx, edi
+0x8048e61	mov	[esp + arg_284], eax
+0x8048e68	mov	eax, [esp + arg_29c]
+0x8048e6f	and	ebx, eax
+0x8048e71	mov	eax, [esp + arg_298]
+0x8048e78	and	eax, edi
+0x8048e7a	and	eax, esi
+0x8048e7c	or	edx, ecx
+0x8048e7e	or	ebx, eax
+0x8048e80	or	edx, ebx
+0x8048e82	mov	eax, edx
+0x8048e84	xor	eax, 0x1
+0x8048e87	mov	ecx, [esp + arg_3b8]
+0x8048e8e	shr	ecx, 0xc
+0x8048e91	and	ecx, 0x1
+0x8048e94	mov	esi, ecx
+0x8048e96	xor	esi, 0x1
+0x8048e99	mov	edi, [esp + arg_3c8]
+0x8048ea0	shr	edi, 0xc
+0x8048ea3	and	edi, 0x1
+0x8048ea6	mov	ebx, edi
+0x8048ea8	xor	ebx, 0x1
+0x8048eab	mov	[esp + arg_280], eax
+0x8048eb2	mov	eax, esi
+0x8048eb4	and	eax, edi
+0x8048eb6	mov	[esp + arg_27c], ecx
+0x8048ebd	mov	ecx, [esp + arg_280]
+0x8048ec4	and	eax, ecx
+0x8048ec6	mov	ecx, [esp + arg_27c]
+0x8048ecd	and	ecx, ebx
+0x8048ecf	mov	[esp + arg_278], eax
+0x8048ed6	mov	eax, [esp + arg_280]
+0x8048edd	and	ecx, eax
+0x8048edf	mov	eax, esi
+0x8048ee1	and	eax, ebx
+0x8048ee3	and	eax, edx
+0x8048ee5	mov	[esp + arg_274], eax
+0x8048eec	mov	eax, [esp + arg_27c]
+0x8048ef3	and	eax, edi
+0x8048ef5	and	eax, edx
+0x8048ef7	mov	[esp + arg_270], eax
+0x8048efe	mov	eax, [esp + arg_278]
+0x8048f05	or	eax, ecx
+0x8048f07	mov	ecx, [esp + arg_274]
+0x8048f0e	mov	[esp + arg_26c], eax
+0x8048f15	mov	eax, [esp + arg_270]
+0x8048f1c	or	ecx, eax
+0x8048f1e	mov	eax, [esp + arg_26c]
+0x8048f25	or	eax, ecx
+0x8048f27	and	esi, edi
+0x8048f29	and	esi, edx
+0x8048f2b	mov	ecx, [esp + arg_27c]
+0x8048f32	and	ecx, ebx
+0x8048f34	and	ecx, edx
+0x8048f36	mov	ebx, [esp + arg_27c]
+0x8048f3d	and	ebx, edi
+0x8048f3f	mov	[esp + arg_268], eax
+0x8048f46	mov	eax, [esp + arg_280]
+0x8048f4d	and	ebx, eax
+0x8048f4f	mov	eax, [esp + arg_27c]
+0x8048f56	and	eax, edi
+0x8048f58	and	eax, edx
+0x8048f5a	or	esi, ecx
+0x8048f5c	or	ebx, eax
+0x8048f5e	or	esi, ebx
+0x8048f60	mov	eax, esi
+0x8048f62	xor	eax, 0x1
+0x8048f65	mov	ecx, [esp + arg_3b8]
+0x8048f6c	shr	ecx, 0xd
+0x8048f6f	and	ecx, 0x1
+0x8048f72	mov	edx, ecx
+0x8048f74	xor	edx, 0x1
+0x8048f77	mov	edi, [esp + arg_3c8]
+0x8048f7e	shr	edi, 0xd
+0x8048f81	and	edi, 0x1
+0x8048f84	mov	ebx, edi
+0x8048f86	xor	ebx, 0x1
+0x8048f89	mov	[esp + arg_264], eax
+0x8048f90	mov	eax, edx
+0x8048f92	and	eax, edi
+0x8048f94	mov	[esp + arg_260], ecx
+0x8048f9b	mov	ecx, [esp + arg_264]
+0x8048fa2	and	eax, ecx
+0x8048fa4	mov	ecx, [esp + arg_260]
+0x8048fab	and	ecx, ebx
+0x8048fad	mov	[esp + arg_25c], eax
+0x8048fb4	mov	eax, [esp + arg_264]
+0x8048fbb	and	ecx, eax
+0x8048fbd	mov	eax, edx
+0x8048fbf	and	eax, ebx
+0x8048fc1	and	eax, esi
+0x8048fc3	mov	[esp + arg_258], eax
+0x8048fca	mov	eax, [esp + arg_260]
+0x8048fd1	and	eax, edi
+0x8048fd3	and	eax, esi
+0x8048fd5	mov	[esp + arg_254], eax
+0x8048fdc	mov	eax, [esp + arg_25c]
+0x8048fe3	or	eax, ecx
+0x8048fe5	mov	ecx, [esp + arg_258]
+0x8048fec	mov	[esp + arg_250], eax
+0x8048ff3	mov	eax, [esp + arg_254]
+0x8048ffa	or	ecx, eax
+0x8048ffc	mov	eax, [esp + arg_250]
+0x8049003	or	eax, ecx
+0x8049005	and	edx, edi
+0x8049007	and	edx, esi
+0x8049009	mov	ecx, [esp + arg_260]
+0x8049010	and	ecx, ebx
+0x8049012	and	ecx, esi
+0x8049014	mov	ebx, [esp + arg_260]
+0x804901b	and	ebx, edi
+0x804901d	mov	[esp + arg_24c], eax
+0x8049024	mov	eax, [esp + arg_264]
+0x804902b	and	ebx, eax
+0x804902d	mov	eax, [esp + arg_260]
+0x8049034	and	eax, edi
+0x8049036	and	eax, esi
+0x8049038	or	edx, ecx
+0x804903a	or	ebx, eax
+0x804903c	or	edx, ebx
+0x804903e	mov	eax, edx
+0x8049040	xor	eax, 0x1
+0x8049043	mov	ecx, [esp + arg_3b8]
+0x804904a	shr	ecx, 0xe
+0x804904d	and	ecx, 0x1
+0x8049050	mov	esi, ecx
+0x8049052	xor	esi, 0x1
+0x8049055	mov	edi, [esp + arg_3c8]
+0x804905c	shr	edi, 0xe
+0x804905f	and	edi, 0x1
+0x8049062	mov	ebx, edi
+0x8049064	xor	ebx, 0x1
+0x8049067	mov	[esp + arg_248], eax
+0x804906e	mov	eax, esi
+0x8049070	and	eax, edi
+0x8049072	mov	[esp + arg_244], ecx
+0x8049079	mov	ecx, [esp + arg_248]
+0x8049080	and	eax, ecx
+0x8049082	mov	ecx, [esp + arg_244]
+0x8049089	and	ecx, ebx
+0x804908b	mov	[esp + arg_240], eax
+0x8049092	mov	eax, [esp + arg_248]
+0x8049099	and	ecx, eax
+0x804909b	mov	eax, esi
+0x804909d	and	eax, ebx
+0x804909f	and	eax, edx
+0x80490a1	mov	[esp + arg_23c], eax
+0x80490a8	mov	eax, [esp + arg_244]
+0x80490af	and	eax, edi
+0x80490b1	and	eax, edx
+0x80490b3	mov	[esp + arg_238], eax
+0x80490ba	mov	eax, [esp + arg_240]
+0x80490c1	or	eax, ecx
+0x80490c3	mov	ecx, [esp + arg_23c]
+0x80490ca	mov	[esp + arg_234], eax
+0x80490d1	mov	eax, [esp + arg_238]
+0x80490d8	or	ecx, eax
+0x80490da	mov	eax, [esp + arg_234]
+0x80490e1	or	eax, ecx
+0x80490e3	and	esi, edi
+0x80490e5	and	esi, edx
+0x80490e7	mov	ecx, [esp + arg_244]
+0x80490ee	and	ecx, ebx
+0x80490f0	and	ecx, edx
+0x80490f2	mov	ebx, [esp + arg_244]
+0x80490f9	and	ebx, edi
+0x80490fb	mov	[esp + arg_230], eax
+0x8049102	mov	eax, [esp + arg_248]
+0x8049109	and	ebx, eax
+0x804910b	mov	eax, [esp + arg_244]
+0x8049112	and	eax, edi
+0x8049114	and	eax, edx
+0x8049116	or	esi, ecx
+0x8049118	or	ebx, eax
+0x804911a	or	esi, ebx
+0x804911c	mov	eax, esi
+0x804911e	xor	eax, 0x1
+0x8049121	mov	ecx, [esp + arg_3b8]
+0x8049128	shr	ecx, 0xf
+0x804912b	and	ecx, 0x1
+0x804912e	mov	edx, ecx
+0x8049130	xor	edx, 0x1
+0x8049133	mov	edi, [esp + arg_3c8]
+0x804913a	shr	edi, 0xf
+0x804913d	and	edi, 0x1
+0x8049140	mov	ebx, edi
+0x8049142	xor	ebx, 0x1
+0x8049145	mov	[esp + arg_22c], eax
+0x804914c	mov	eax, edx
+0x804914e	and	eax, edi
+0x8049150	mov	[esp + arg_228], ecx
+0x8049157	mov	ecx, [esp + arg_22c]
+0x804915e	and	eax, ecx
+0x8049160	mov	ecx, [esp + arg_228]
+0x8049167	and	ecx, ebx
+0x8049169	mov	[esp + arg_224], eax
+0x8049170	mov	eax, [esp + arg_22c]
+0x8049177	and	ecx, eax
+0x8049179	mov	eax, edx
+0x804917b	and	eax, ebx
+0x804917d	and	eax, esi
+0x804917f	mov	[esp + arg_220], eax
+0x8049186	mov	eax, [esp + arg_228]
+0x804918d	and	eax, edi
+0x804918f	and	eax, esi
+0x8049191	mov	[esp + arg_21c], eax
+0x8049198	mov	eax, [esp + arg_224]
+0x804919f	or	eax, ecx
+0x80491a1	mov	ecx, [esp + arg_220]
+0x80491a8	mov	[esp + arg_218], eax
+0x80491af	mov	eax, [esp + arg_21c]
+0x80491b6	or	ecx, eax
+0x80491b8	mov	eax, [esp + arg_218]
+0x80491bf	or	eax, ecx
+0x80491c1	and	edx, edi
+0x80491c3	and	edx, esi
+0x80491c5	mov	ecx, [esp + arg_228]
+0x80491cc	and	ecx, ebx
+0x80491ce	and	ecx, esi
+0x80491d0	mov	ebx, [esp + arg_228]
+0x80491d7	and	ebx, edi
+0x80491d9	mov	[esp + arg_214], eax
+0x80491e0	mov	eax, [esp + arg_22c]
+0x80491e7	and	ebx, eax
+0x80491e9	mov	eax, [esp + arg_228]
+0x80491f0	and	eax, edi
+0x80491f2	and	eax, esi
+0x80491f4	or	edx, ecx
+0x80491f6	or	ebx, eax
+0x80491f8	or	edx, ebx
+0x80491fa	mov	eax, edx
+0x80491fc	xor	eax, 0x1
+0x80491ff	mov	ecx, [esp + arg_3b8]
+0x8049206	shr	ecx, 0x10
+0x8049209	and	ecx, 0x1
+0x804920c	mov	esi, ecx
+0x804920e	xor	esi, 0x1
+0x8049211	mov	edi, [esp + arg_3c8]
+0x8049218	shr	edi, 0x10
+0x804921b	and	edi, 0x1
+0x804921e	mov	ebx, edi
+0x8049220	xor	ebx, 0x1
+0x8049223	mov	[esp + arg_210], eax
+0x804922a	mov	eax, esi
+0x804922c	and	eax, edi
+0x804922e	mov	[esp + arg_20c], ecx
+0x8049235	mov	ecx, [esp + arg_210]
+0x804923c	and	eax, ecx
+0x804923e	mov	ecx, [esp + arg_20c]
+0x8049245	and	ecx, ebx
+0x8049247	mov	[esp + arg_208], eax
+0x804924e	mov	eax, [esp + arg_210]
+0x8049255	and	ecx, eax
+0x8049257	mov	eax, esi
+0x8049259	and	eax, ebx
+0x804925b	and	eax, edx
+0x804925d	mov	[esp + arg_204], eax
+0x8049264	mov	eax, [esp + arg_20c]
+0x804926b	and	eax, edi
+0x804926d	and	eax, edx
+0x804926f	mov	[esp + arg_200], eax
+0x8049276	mov	eax, [esp + arg_208]
+0x804927d	or	eax, ecx
+0x804927f	mov	ecx, [esp + arg_204]
+0x8049286	mov	[esp + arg_1fc], eax
+0x804928d	mov	eax, [esp + arg_200]
+0x8049294	or	ecx, eax
+0x8049296	mov	eax, [esp + arg_1fc]
+0x804929d	or	eax, ecx
+0x804929f	and	esi, edi
+0x80492a1	and	esi, edx
+0x80492a3	mov	ecx, [esp + arg_20c]
+0x80492aa	and	ecx, ebx
+0x80492ac	and	ecx, edx
+0x80492ae	mov	ebx, [esp + arg_20c]
+0x80492b5	and	ebx, edi
+0x80492b7	mov	[esp + arg_1f8], eax
+0x80492be	mov	eax, [esp + arg_210]
+0x80492c5	and	ebx, eax
+0x80492c7	mov	eax, [esp + arg_20c]
+0x80492ce	and	eax, edi
+0x80492d0	and	eax, edx
+0x80492d2	or	esi, ecx
+0x80492d4	or	ebx, eax
+0x80492d6	or	esi, ebx
+0x80492d8	mov	eax, esi
+0x80492da	xor	eax, 0x1
+0x80492dd	mov	ecx, [esp + arg_3b8]
+0x80492e4	shr	ecx, 0x11
+0x80492e7	and	ecx, 0x1
+0x80492ea	mov	edx, ecx
+0x80492ec	xor	edx, 0x1
+0x80492ef	mov	edi, [esp + arg_3c8]
+0x80492f6	shr	edi, 0x11
+0x80492f9	and	edi, 0x1
+0x80492fc	mov	ebx, edi
+0x80492fe	xor	ebx, 0x1
+0x8049301	mov	[esp + arg_1f4], eax
+0x8049308	mov	eax, edx
+0x804930a	and	eax, edi
+0x804930c	mov	[esp + arg_1f0], ecx
+0x8049313	mov	ecx, [esp + arg_1f4]
+0x804931a	and	eax, ecx
+0x804931c	mov	ecx, [esp + arg_1f0]
+0x8049323	and	ecx, ebx
+0x8049325	mov	[esp + arg_1ec], eax
+0x804932c	mov	eax, [esp + arg_1f4]
+0x8049333	and	ecx, eax
+0x8049335	mov	eax, edx
+0x8049337	and	eax, ebx
+0x8049339	and	eax, esi
+0x804933b	mov	[esp + arg_1e8], eax
+0x8049342	mov	eax, [esp + arg_1f0]
+0x8049349	and	eax, edi
+0x804934b	and	eax, esi
+0x804934d	mov	[esp + arg_1e4], eax
+0x8049354	mov	eax, [esp + arg_1ec]
+0x804935b	or	eax, ecx
+0x804935d	mov	ecx, [esp + arg_1e8]
+0x8049364	mov	[esp + arg_1e0], eax
+0x804936b	mov	eax, [esp + arg_1e4]
+0x8049372	or	ecx, eax
+0x8049374	mov	eax, [esp + arg_1e0]
+0x804937b	or	eax, ecx
+0x804937d	and	edx, edi
+0x804937f	and	edx, esi
+0x8049381	mov	ecx, [esp + arg_1f0]
+0x8049388	and	ecx, ebx
+0x804938a	and	ecx, esi
+0x804938c	mov	ebx, [esp + arg_1f0]
+0x8049393	and	ebx, edi
+0x8049395	mov	[esp + arg_1dc], eax
+0x804939c	mov	eax, [esp + arg_1f4]
+0x80493a3	and	ebx, eax
+0x80493a5	mov	eax, [esp + arg_1f0]
+0x80493ac	and	eax, edi
+0x80493ae	and	eax, esi
+0x80493b0	or	edx, ecx
+0x80493b2	or	ebx, eax
+0x80493b4	or	edx, ebx
+0x80493b6	mov	eax, edx
+0x80493b8	xor	eax, 0x1
+0x80493bb	mov	ecx, [esp + arg_3b8]
+0x80493c2	shr	ecx, 0x12
+0x80493c5	and	ecx, 0x1
+0x80493c8	mov	esi, ecx
+0x80493ca	xor	esi, 0x1
+0x80493cd	mov	edi, [esp + arg_3c8]
+0x80493d4	shr	edi, 0x12
+0x80493d7	and	edi, 0x1
+0x80493da	mov	ebx, edi
+0x80493dc	xor	ebx, 0x1
+0x80493df	mov	[esp + arg_1d8], eax
+0x80493e6	mov	eax, esi
+0x80493e8	and	eax, edi
+0x80493ea	mov	[esp + arg_1d4], ecx
+0x80493f1	mov	ecx, [esp + arg_1d8]
+0x80493f8	and	eax, ecx
+0x80493fa	mov	ecx, [esp + arg_1d4]
+0x8049401	and	ecx, ebx
+0x8049403	mov	[esp + arg_1d0], eax
+0x804940a	mov	eax, [esp + arg_1d8]
+0x8049411	and	ecx, eax
+0x8049413	mov	eax, esi
+0x8049415	and	eax, ebx
+0x8049417	and	eax, edx
+0x8049419	mov	[esp + arg_1cc], eax
+0x8049420	mov	eax, [esp + arg_1d4]
+0x8049427	and	eax, edi
+0x8049429	and	eax, edx
+0x804942b	mov	[esp + arg_1c8], eax
+0x8049432	mov	eax, [esp + arg_1d0]
+0x8049439	or	eax, ecx
+0x804943b	mov	ecx, [esp + arg_1cc]
+0x8049442	mov	[esp + arg_1c4], eax
+0x8049449	mov	eax, [esp + arg_1c8]
+0x8049450	or	ecx, eax
+0x8049452	mov	eax, [esp + arg_1c4]
+0x8049459	or	eax, ecx
+0x804945b	and	esi, edi
+0x804945d	and	esi, edx
+0x804945f	mov	ecx, [esp + arg_1d4]
+0x8049466	and	ecx, ebx
+0x8049468	and	ecx, edx
+0x804946a	mov	ebx, [esp + arg_1d4]
+0x8049471	and	ebx, edi
+0x8049473	mov	[esp + arg_1c0], eax
+0x804947a	mov	eax, [esp + arg_1d8]
+0x8049481	and	ebx, eax
+0x8049483	mov	eax, [esp + arg_1d4]
+0x804948a	and	eax, edi
+0x804948c	and	eax, edx
+0x804948e	or	esi, ecx
+0x8049490	or	ebx, eax
+0x8049492	or	esi, ebx
+0x8049494	mov	eax, esi
+0x8049496	xor	eax, 0x1
+0x8049499	mov	ecx, [esp + arg_3b8]
+0x80494a0	shr	ecx, 0x13
+0x80494a3	and	ecx, 0x1
+0x80494a6	mov	edx, ecx
+0x80494a8	xor	edx, 0x1
+0x80494ab	mov	edi, [esp + arg_3c8]
+0x80494b2	shr	edi, 0x13
+0x80494b5	and	edi, 0x1
+0x80494b8	mov	ebx, edi
+0x80494ba	xor	ebx, 0x1
+0x80494bd	mov	[esp + arg_1bc], eax
+0x80494c4	mov	eax, edx
+0x80494c6	and	eax, edi
+0x80494c8	mov	[esp + arg_1b8], ecx
+0x80494cf	mov	ecx, [esp + arg_1bc]
+0x80494d6	and	eax, ecx
+0x80494d8	mov	ecx, [esp + arg_1b8]
+0x80494df	and	ecx, ebx
+0x80494e1	mov	[esp + arg_1b4], eax
+0x80494e8	mov	eax, [esp + arg_1bc]
+0x80494ef	and	ecx, eax
+0x80494f1	mov	eax, edx
+0x80494f3	and	eax, ebx
+0x80494f5	and	eax, esi
+0x80494f7	mov	[esp + arg_1b0], eax
+0x80494fe	mov	eax, [esp + arg_1b8]
+0x8049505	and	eax, edi
+0x8049507	and	eax, esi
+0x8049509	mov	[esp + arg_1ac], eax
+0x8049510	mov	eax, [esp + arg_1b4]
+0x8049517	or	eax, ecx
+0x8049519	mov	ecx, [esp + arg_1b0]
+0x8049520	mov	[esp + arg_1a8], eax
+0x8049527	mov	eax, [esp + arg_1ac]
+0x804952e	or	ecx, eax
+0x8049530	mov	eax, [esp + arg_1a8]
+0x8049537	or	eax, ecx
+0x8049539	and	edx, edi
+0x804953b	and	edx, esi
+0x804953d	mov	ecx, [esp + arg_1b8]
+0x8049544	and	ecx, ebx
+0x8049546	and	ecx, esi
+0x8049548	mov	ebx, [esp + arg_1b8]
+0x804954f	and	ebx, edi
+0x8049551	mov	[esp + arg_1a4], eax
+0x8049558	mov	eax, [esp + arg_1bc]
+0x804955f	and	ebx, eax
+0x8049561	mov	eax, [esp + arg_1b8]
+0x8049568	and	eax, edi
+0x804956a	and	eax, esi
+0x804956c	or	edx, ecx
+0x804956e	or	ebx, eax
+0x8049570	or	edx, ebx
+0x8049572	mov	eax, edx
+0x8049574	xor	eax, 0x1
+0x8049577	mov	ecx, [esp + arg_3b8]
+0x804957e	shr	ecx, 0x14
+0x8049581	and	ecx, 0x1
+0x8049584	mov	esi, ecx
+0x8049586	xor	esi, 0x1
+0x8049589	mov	edi, [esp + arg_3c8]
+0x8049590	shr	edi, 0x14
+0x8049593	and	edi, 0x1
+0x8049596	mov	ebx, edi
+0x8049598	xor	ebx, 0x1
+0x804959b	mov	[esp + arg_1a0], eax
+0x80495a2	mov	eax, esi
+0x80495a4	and	eax, edi
+0x80495a6	mov	[esp + arg_19c], ecx
+0x80495ad	mov	ecx, [esp + arg_1a0]
+0x80495b4	and	eax, ecx
+0x80495b6	mov	ecx, [esp + arg_19c]
+0x80495bd	and	ecx, ebx
+0x80495bf	mov	[esp + arg_198], eax
+0x80495c6	mov	eax, [esp + arg_1a0]
+0x80495cd	and	ecx, eax
+0x80495cf	mov	eax, esi
+0x80495d1	and	eax, ebx
+0x80495d3	and	eax, edx
+0x80495d5	mov	[esp + arg_194], eax
+0x80495dc	mov	eax, [esp + arg_19c]
+0x80495e3	and	eax, edi
+0x80495e5	and	eax, edx
+0x80495e7	mov	[esp + arg_190], eax
+0x80495ee	mov	eax, [esp + arg_198]
+0x80495f5	or	eax, ecx
+0x80495f7	mov	ecx, [esp + arg_194]
+0x80495fe	mov	[esp + arg_18c], eax
+0x8049605	mov	eax, [esp + arg_190]
+0x804960c	or	ecx, eax
+0x804960e	mov	eax, [esp + arg_18c]
+0x8049615	or	eax, ecx
+0x8049617	and	esi, edi
+0x8049619	and	esi, edx
+0x804961b	mov	ecx, [esp + arg_19c]
+0x8049622	and	ecx, ebx
+0x8049624	and	ecx, edx
+0x8049626	mov	ebx, [esp + arg_19c]
+0x804962d	and	ebx, edi
+0x804962f	mov	[esp + arg_188], eax
+0x8049636	mov	eax, [esp + arg_1a0]
+0x804963d	and	ebx, eax
+0x804963f	mov	eax, [esp + arg_19c]
+0x8049646	and	eax, edi
+0x8049648	and	eax, edx
+0x804964a	or	esi, ecx
+0x804964c	or	ebx, eax
+0x804964e	or	esi, ebx
+0x8049650	mov	eax, esi
+0x8049652	xor	eax, 0x1
+0x8049655	mov	ecx, [esp + arg_3b8]
+0x804965c	shr	ecx, 0x15
+0x804965f	and	ecx, 0x1
+0x8049662	mov	edx, ecx
+0x8049664	xor	edx, 0x1
+0x8049667	mov	edi, [esp + arg_3c8]
+0x804966e	shr	edi, 0x15
+0x8049671	and	edi, 0x1
+0x8049674	mov	ebx, edi
+0x8049676	xor	ebx, 0x1
+0x8049679	mov	[esp + arg_184], eax
+0x8049680	mov	eax, edx
+0x8049682	and	eax, edi
+0x8049684	mov	[esp + arg_180], ecx
+0x804968b	mov	ecx, [esp + arg_184]
+0x8049692	and	eax, ecx
+0x8049694	mov	ecx, [esp + arg_180]
+0x804969b	and	ecx, ebx
+0x804969d	mov	[esp + arg_17c], eax
+0x80496a4	mov	eax, [esp + arg_184]
+0x80496ab	and	ecx, eax
+0x80496ad	mov	eax, edx
+0x80496af	and	eax, ebx
+0x80496b1	and	eax, esi
+0x80496b3	mov	[esp + arg_178], eax
+0x80496ba	mov	eax, [esp + arg_180]
+0x80496c1	and	eax, edi
+0x80496c3	and	eax, esi
+0x80496c5	mov	[esp + arg_174], eax
+0x80496cc	mov	eax, [esp + arg_17c]
+0x80496d3	or	eax, ecx
+0x80496d5	mov	ecx, [esp + arg_178]
+0x80496dc	mov	[esp + arg_170], eax
+0x80496e3	mov	eax, [esp + arg_174]
+0x80496ea	or	ecx, eax
+0x80496ec	mov	eax, [esp + arg_170]
+0x80496f3	or	eax, ecx
+0x80496f5	and	edx, edi
+0x80496f7	and	edx, esi
+0x80496f9	mov	ecx, [esp + arg_180]
+0x8049700	and	ecx, ebx
+0x8049702	and	ecx, esi
+0x8049704	mov	ebx, [esp + arg_180]
+0x804970b	and	ebx, edi
+0x804970d	mov	[esp + arg_16c], eax
+0x8049714	mov	eax, [esp + arg_184]
+0x804971b	and	ebx, eax
+0x804971d	mov	eax, [esp + arg_180]
+0x8049724	and	eax, edi
+0x8049726	and	eax, esi
+0x8049728	or	edx, ecx
+0x804972a	or	ebx, eax
+0x804972c	or	edx, ebx
+0x804972e	mov	eax, edx
+0x8049730	xor	eax, 0x1
+0x8049733	mov	ecx, [esp + arg_3b8]
+0x804973a	shr	ecx, 0x16
+0x804973d	and	ecx, 0x1
+0x8049740	mov	esi, ecx
+0x8049742	xor	esi, 0x1
+0x8049745	mov	edi, [esp + arg_3c8]
+0x804974c	shr	edi, 0x16
+0x804974f	and	edi, 0x1
+0x8049752	mov	ebx, edi
+0x8049754	xor	ebx, 0x1
+0x8049757	mov	[esp + arg_168], eax
+0x804975e	mov	eax, esi
+0x8049760	and	eax, edi
+0x8049762	mov	[esp + arg_164], ecx
+0x8049769	mov	ecx, [esp + arg_168]
+0x8049770	and	eax, ecx
+0x8049772	mov	ecx, [esp + arg_164]
+0x8049779	and	ecx, ebx
+0x804977b	mov	[esp + arg_160], eax
+0x8049782	mov	eax, [esp + arg_168]
+0x8049789	and	ecx, eax
+0x804978b	mov	eax, esi
+0x804978d	and	eax, ebx
+0x804978f	and	eax, edx
+0x8049791	mov	[esp + arg_15c], eax
+0x8049798	mov	eax, [esp + arg_164]
+0x804979f	and	eax, edi
+0x80497a1	and	eax, edx
+0x80497a3	mov	[esp + arg_158], eax
+0x80497aa	mov	eax, [esp + arg_160]
+0x80497b1	or	eax, ecx
+0x80497b3	mov	ecx, [esp + arg_15c]
+0x80497ba	mov	[esp + arg_154], eax
+0x80497c1	mov	eax, [esp + arg_158]
+0x80497c8	or	ecx, eax
+0x80497ca	mov	eax, [esp + arg_154]
+0x80497d1	or	eax, ecx
+0x80497d3	and	esi, edi
+0x80497d5	and	esi, edx
+0x80497d7	mov	ecx, [esp + arg_164]
+0x80497de	and	ecx, ebx
+0x80497e0	and	ecx, edx
+0x80497e2	mov	ebx, [esp + arg_164]
+0x80497e9	and	ebx, edi
+0x80497eb	mov	[esp + arg_150], eax
+0x80497f2	mov	eax, [esp + arg_168]
+0x80497f9	and	ebx, eax
+0x80497fb	mov	eax, [esp + arg_164]
+0x8049802	and	eax, edi
+0x8049804	and	eax, edx
+0x8049806	or	esi, ecx
+0x8049808	or	ebx, eax
+0x804980a	or	esi, ebx
+0x804980c	mov	eax, esi
+0x804980e	xor	eax, 0x1
+0x8049811	mov	ecx, [esp + arg_3b8]
+0x8049818	shr	ecx, 0x17
+0x804981b	and	ecx, 0x1
+0x804981e	mov	edx, ecx
+0x8049820	xor	edx, 0x1
+0x8049823	mov	edi, [esp + arg_3c8]
+0x804982a	shr	edi, 0x17
+0x804982d	and	edi, 0x1
+0x8049830	mov	ebx, edi
+0x8049832	xor	ebx, 0x1
+0x8049835	mov	[esp + arg_14c], eax
+0x804983c	mov	eax, edx
+0x804983e	and	eax, edi
+0x8049840	mov	[esp + arg_148], ecx
+0x8049847	mov	ecx, [esp + arg_14c]
+0x804984e	and	eax, ecx
+0x8049850	mov	ecx, [esp + arg_148]
+0x8049857	and	ecx, ebx
+0x8049859	mov	[esp + arg_144], eax
+0x8049860	mov	eax, [esp + arg_14c]
+0x8049867	and	ecx, eax
+0x8049869	mov	eax, edx
+0x804986b	and	eax, ebx
+0x804986d	and	eax, esi
+0x804986f	mov	[esp + arg_140], eax
+0x8049876	mov	eax, [esp + arg_148]
+0x804987d	and	eax, edi
+0x804987f	and	eax, esi
+0x8049881	mov	[esp + arg_13c], eax
+0x8049888	mov	eax, [esp + arg_144]
+0x804988f	or	eax, ecx
+0x8049891	mov	ecx, [esp + arg_140]
+0x8049898	mov	[esp + arg_138], eax
+0x804989f	mov	eax, [esp + arg_13c]
+0x80498a6	or	ecx, eax
+0x80498a8	mov	eax, [esp + arg_138]
+0x80498af	or	eax, ecx
+0x80498b1	and	edx, edi
+0x80498b3	and	edx, esi
+0x80498b5	mov	ecx, [esp + arg_148]
+0x80498bc	and	ecx, ebx
+0x80498be	and	ecx, esi
+0x80498c0	mov	ebx, [esp + arg_148]
+0x80498c7	and	ebx, edi
+0x80498c9	mov	[esp + arg_134], eax
+0x80498d0	mov	eax, [esp + arg_14c]
+0x80498d7	and	ebx, eax
+0x80498d9	mov	eax, [esp + arg_148]
+0x80498e0	and	eax, edi
+0x80498e2	and	eax, esi
+0x80498e4	or	edx, ecx
+0x80498e6	or	ebx, eax
+0x80498e8	or	edx, ebx
+0x80498ea	mov	eax, edx
+0x80498ec	xor	eax, 0x1
+0x80498ef	mov	ecx, [esp + arg_3b8]
+0x80498f6	shr	ecx, 0x18
+0x80498f9	and	ecx, 0x1
+0x80498fc	mov	esi, ecx
+0x80498fe	xor	esi, 0x1
+0x8049901	mov	edi, [esp + arg_3c8]
+0x8049908	shr	edi, 0x18
+0x804990b	and	edi, 0x1
+0x804990e	mov	ebx, edi
+0x8049910	xor	ebx, 0x1
+0x8049913	mov	[esp + arg_130], eax
+0x804991a	mov	eax, esi
+0x804991c	and	eax, edi
+0x804991e	mov	[esp + arg_12c], ecx
+0x8049925	mov	ecx, [esp + arg_130]
+0x804992c	and	eax, ecx
+0x804992e	mov	ecx, [esp + arg_12c]
+0x8049935	and	ecx, ebx
+0x8049937	mov	[esp + arg_128], eax
+0x804993e	mov	eax, [esp + arg_130]
+0x8049945	and	ecx, eax
+0x8049947	mov	eax, esi
+0x8049949	and	eax, ebx
+0x804994b	and	eax, edx
+0x804994d	mov	[esp + arg_124], eax
+0x8049954	mov	eax, [esp + arg_12c]
+0x804995b	and	eax, edi
+0x804995d	and	eax, edx
+0x804995f	mov	[esp + arg_120], eax
+0x8049966	mov	eax, [esp + arg_128]
+0x804996d	or	eax, ecx
+0x804996f	mov	ecx, [esp + arg_124]
+0x8049976	mov	[esp + arg_11c], eax
+0x804997d	mov	eax, [esp + arg_120]
+0x8049984	or	ecx, eax
+0x8049986	mov	eax, [esp + arg_11c]
+0x804998d	or	eax, ecx
+0x804998f	and	esi, edi
+0x8049991	and	esi, edx
+0x8049993	mov	ecx, [esp + arg_12c]
+0x804999a	and	ecx, ebx
+0x804999c	and	ecx, edx
+0x804999e	mov	ebx, [esp + arg_12c]
+0x80499a5	and	ebx, edi
+0x80499a7	mov	[esp + arg_118], eax
+0x80499ae	mov	eax, [esp + arg_130]
+0x80499b5	and	ebx, eax
+0x80499b7	mov	eax, [esp + arg_12c]
+0x80499be	and	eax, edi
+0x80499c0	and	eax, edx
+0x80499c2	or	esi, ecx
+0x80499c4	or	ebx, eax
+0x80499c6	or	esi, ebx
+0x80499c8	mov	eax, esi
+0x80499ca	xor	eax, 0x1
+0x80499cd	mov	ecx, [esp + arg_3b8]
+0x80499d4	shr	ecx, 0x19
+0x80499d7	and	ecx, 0x1
+0x80499da	mov	edx, ecx
+0x80499dc	xor	edx, 0x1
+0x80499df	mov	edi, [esp + arg_3c8]
+0x80499e6	shr	edi, 0x19
+0x80499e9	and	edi, 0x1
+0x80499ec	mov	ebx, edi
+0x80499ee	xor	ebx, 0x1
+0x80499f1	mov	[esp + arg_114], eax
+0x80499f8	mov	eax, edx
+0x80499fa	and	eax, edi
+0x80499fc	mov	[esp + arg_110], ecx
+0x8049a03	mov	ecx, [esp + arg_114]
+0x8049a0a	and	eax, ecx
+0x8049a0c	mov	ecx, [esp + arg_110]
+0x8049a13	and	ecx, ebx
+0x8049a15	mov	[esp + arg_10c], eax
+0x8049a1c	mov	eax, [esp + arg_114]
+0x8049a23	and	ecx, eax
+0x8049a25	mov	eax, edx
+0x8049a27	and	eax, ebx
+0x8049a29	and	eax, esi
+0x8049a2b	mov	[esp + arg_108], eax
+0x8049a32	mov	eax, [esp + arg_110]
+0x8049a39	and	eax, edi
+0x8049a3b	and	eax, esi
+0x8049a3d	mov	[esp + arg_104], eax
+0x8049a44	mov	eax, [esp + arg_10c]
+0x8049a4b	or	eax, ecx
+0x8049a4d	mov	ecx, [esp + arg_108]
+0x8049a54	mov	[esp + arg_100], eax
+0x8049a5b	mov	eax, [esp + arg_104]
+0x8049a62	or	ecx, eax
+0x8049a64	mov	eax, [esp + arg_100]
+0x8049a6b	or	eax, ecx
+0x8049a6d	and	edx, edi
+0x8049a6f	and	edx, esi
+0x8049a71	mov	ecx, [esp + arg_110]
+0x8049a78	and	ecx, ebx
+0x8049a7a	and	ecx, esi
+0x8049a7c	mov	ebx, [esp + arg_110]
+0x8049a83	and	ebx, edi
+0x8049a85	mov	[esp + arg_fc], eax
+0x8049a8c	mov	eax, [esp + arg_114]
+0x8049a93	and	ebx, eax
+0x8049a95	mov	eax, [esp + arg_110]
+0x8049a9c	and	eax, edi
+0x8049a9e	and	eax, esi
+0x8049aa0	or	edx, ecx
+0x8049aa2	or	ebx, eax
+0x8049aa4	or	edx, ebx
+0x8049aa6	mov	eax, edx
+0x8049aa8	xor	eax, 0x1
+0x8049aab	mov	ecx, [esp + arg_3b8]
+0x8049ab2	shr	ecx, 0x1a
+0x8049ab5	and	ecx, 0x1
+0x8049ab8	mov	esi, ecx
+0x8049aba	xor	esi, 0x1
+0x8049abd	mov	edi, [esp + arg_3c8]
+0x8049ac4	shr	edi, 0x1a
+0x8049ac7	and	edi, 0x1
+0x8049aca	mov	ebx, edi
+0x8049acc	xor	ebx, 0x1
+0x8049acf	mov	[esp + arg_f8], eax
+0x8049ad6	mov	eax, esi
+0x8049ad8	and	eax, edi
+0x8049ada	mov	[esp + arg_f4], ecx
+0x8049ae1	mov	ecx, [esp + arg_f8]
+0x8049ae8	and	eax, ecx
+0x8049aea	mov	ecx, [esp + arg_f4]
+0x8049af1	and	ecx, ebx
+0x8049af3	mov	[esp + arg_f0], eax
+0x8049afa	mov	eax, [esp + arg_f8]
+0x8049b01	and	ecx, eax
+0x8049b03	mov	eax, esi
+0x8049b05	and	eax, ebx
+0x8049b07	and	eax, edx
+0x8049b09	mov	[esp + arg_ec], eax
+0x8049b10	mov	eax, [esp + arg_f4]
+0x8049b17	and	eax, edi
+0x8049b19	and	eax, edx
+0x8049b1b	mov	[esp + arg_e8], eax
+0x8049b22	mov	eax, [esp + arg_f0]
+0x8049b29	or	eax, ecx
+0x8049b2b	mov	ecx, [esp + arg_ec]
+0x8049b32	mov	[esp + arg_e4], eax
+0x8049b39	mov	eax, [esp + arg_e8]
+0x8049b40	or	ecx, eax
+0x8049b42	mov	eax, [esp + arg_e4]
+0x8049b49	or	eax, ecx
+0x8049b4b	and	esi, edi
+0x8049b4d	and	esi, edx
+0x8049b4f	mov	ecx, [esp + arg_f4]
+0x8049b56	and	ecx, ebx
+0x8049b58	and	ecx, edx
+0x8049b5a	mov	ebx, [esp + arg_f4]
+0x8049b61	and	ebx, edi
+0x8049b63	mov	[esp + arg_e0], eax
+0x8049b6a	mov	eax, [esp + arg_f8]
+0x8049b71	and	ebx, eax
+0x8049b73	mov	eax, [esp + arg_f4]
+0x8049b7a	and	eax, edi
+0x8049b7c	and	eax, edx
+0x8049b7e	or	esi, ecx
+0x8049b80	or	ebx, eax
+0x8049b82	or	esi, ebx
+0x8049b84	mov	eax, esi
+0x8049b86	xor	eax, 0x1
+0x8049b89	mov	ecx, [esp + arg_3b8]
+0x8049b90	shr	ecx, 0x1b
+0x8049b93	and	ecx, 0x1
+0x8049b96	mov	edx, ecx
+0x8049b98	xor	edx, 0x1
+0x8049b9b	mov	edi, [esp + arg_3c8]
+0x8049ba2	shr	edi, 0x1b
+0x8049ba5	and	edi, 0x1
+0x8049ba8	mov	ebx, edi
+0x8049baa	xor	ebx, 0x1
+0x8049bad	mov	[esp + arg_dc], eax
+0x8049bb4	mov	eax, edx
+0x8049bb6	and	eax, edi
+0x8049bb8	mov	[esp + arg_d8], ecx
+0x8049bbf	mov	ecx, [esp + arg_dc]
+0x8049bc6	and	eax, ecx
+0x8049bc8	mov	ecx, [esp + arg_d8]
+0x8049bcf	and	ecx, ebx
+0x8049bd1	mov	[esp + arg_d4], eax
+0x8049bd8	mov	eax, [esp + arg_dc]
+0x8049bdf	and	ecx, eax
+0x8049be1	mov	eax, edx
+0x8049be3	and	eax, ebx
+0x8049be5	and	eax, esi
+0x8049be7	mov	[esp + arg_d0], eax
+0x8049bee	mov	eax, [esp + arg_d8]
+0x8049bf5	and	eax, edi
+0x8049bf7	and	eax, esi
+0x8049bf9	mov	[esp + arg_cc], eax
+0x8049c00	mov	eax, [esp + arg_d4]
+0x8049c07	or	eax, ecx
+0x8049c09	mov	ecx, [esp + arg_d0]
+0x8049c10	mov	[esp + arg_c8], eax
+0x8049c17	mov	eax, [esp + arg_cc]
+0x8049c1e	or	ecx, eax
+0x8049c20	mov	eax, [esp + arg_c8]
+0x8049c27	or	eax, ecx
+0x8049c29	and	edx, edi
+0x8049c2b	and	edx, esi
+0x8049c2d	mov	ecx, [esp + arg_d8]
+0x8049c34	and	ecx, ebx
+0x8049c36	and	ecx, esi
+0x8049c38	mov	ebx, [esp + arg_d8]
+0x8049c3f	and	ebx, edi
+0x8049c41	mov	[esp + arg_c4], eax
+0x8049c48	mov	eax, [esp + arg_dc]
+0x8049c4f	and	ebx, eax
+0x8049c51	mov	eax, [esp + arg_d8]
+0x8049c58	and	eax, edi
+0x8049c5a	and	eax, esi
+0x8049c5c	or	edx, ecx
+0x8049c5e	or	ebx, eax
+0x8049c60	or	edx, ebx
+0x8049c62	mov	eax, edx
+0x8049c64	xor	eax, 0x1
+0x8049c67	mov	ecx, [esp + arg_3b8]
+0x8049c6e	shr	ecx, 0x1c
+0x8049c71	and	ecx, 0x1
+0x8049c74	mov	esi, ecx
+0x8049c76	xor	esi, 0x1
+0x8049c79	mov	edi, [esp + arg_3c8]
+0x8049c80	shr	edi, 0x1c
+0x8049c83	and	edi, 0x1
+0x8049c86	mov	ebx, edi
+0x8049c88	xor	ebx, 0x1
+0x8049c8b	mov	[esp + arg_c0], eax
+0x8049c92	mov	eax, esi
+0x8049c94	and	eax, edi
+0x8049c96	mov	[esp + arg_bc], ecx
+0x8049c9d	mov	ecx, [esp + arg_c0]
+0x8049ca4	and	eax, ecx
+0x8049ca6	mov	ecx, [esp + arg_bc]
+0x8049cad	and	ecx, ebx
+0x8049caf	mov	[esp + arg_b8], eax
+0x8049cb6	mov	eax, [esp + arg_c0]
+0x8049cbd	and	ecx, eax
+0x8049cbf	mov	eax, esi
+0x8049cc1	and	eax, ebx
+0x8049cc3	and	eax, edx
+0x8049cc5	mov	[esp + arg_b4], eax
+0x8049ccc	mov	eax, [esp + arg_bc]
+0x8049cd3	and	eax, edi
+0x8049cd5	and	eax, edx
+0x8049cd7	mov	[esp + arg_b0], eax
+0x8049cde	mov	eax, [esp + arg_b8]
+0x8049ce5	or	eax, ecx
+0x8049ce7	mov	ecx, [esp + arg_b4]
+0x8049cee	mov	[esp + arg_ac], eax
+0x8049cf5	mov	eax, [esp + arg_b0]
+0x8049cfc	or	ecx, eax
+0x8049cfe	mov	eax, [esp + arg_ac]
+0x8049d05	or	eax, ecx
+0x8049d07	and	esi, edi
+0x8049d09	and	esi, edx
+0x8049d0b	mov	ecx, [esp + arg_bc]
+0x8049d12	and	ecx, ebx
+0x8049d14	and	ecx, edx
+0x8049d16	mov	ebx, [esp + arg_bc]
+0x8049d1d	and	ebx, edi
+0x8049d1f	mov	[esp + arg_a8], eax
+0x8049d26	mov	eax, [esp + arg_c0]
+0x8049d2d	and	ebx, eax
+0x8049d2f	mov	eax, [esp + arg_bc]
+0x8049d36	and	eax, edi
+0x8049d38	and	eax, edx
+0x8049d3a	or	esi, ecx
+0x8049d3c	or	ebx, eax
+0x8049d3e	or	esi, ebx
+0x8049d40	mov	eax, esi
+0x8049d42	xor	eax, 0x1
+0x8049d45	mov	ecx, [esp + arg_3b8]
+0x8049d4c	shr	ecx, 0x1d
+0x8049d4f	and	ecx, 0x1
+0x8049d52	mov	edx, ecx
+0x8049d54	xor	edx, 0x1
+0x8049d57	mov	edi, [esp + arg_3c8]
+0x8049d5e	shr	edi, 0x1d
+0x8049d61	and	edi, 0x1
+0x8049d64	mov	ebx, edi
+0x8049d66	xor	ebx, 0x1
+0x8049d69	mov	[esp + arg_a4], eax
+0x8049d70	mov	eax, edx
+0x8049d72	and	eax, edi
+0x8049d74	mov	[esp + arg_a0], ecx
+0x8049d7b	mov	ecx, [esp + arg_a4]
+0x8049d82	and	eax, ecx
+0x8049d84	mov	ecx, [esp + arg_a0]
+0x8049d8b	and	ecx, ebx
+0x8049d8d	mov	[esp + arg_9c], eax
+0x8049d94	mov	eax, [esp + arg_a4]
+0x8049d9b	and	ecx, eax
+0x8049d9d	mov	eax, edx
+0x8049d9f	and	eax, ebx
+0x8049da1	and	eax, esi
+0x8049da3	mov	[esp + arg_98], eax
+0x8049daa	mov	eax, [esp + arg_a0]
+0x8049db1	and	eax, edi
+0x8049db3	and	eax, esi
+0x8049db5	mov	[esp + arg_94], eax
+0x8049dbc	mov	eax, [esp + arg_9c]
+0x8049dc3	or	eax, ecx
+0x8049dc5	mov	ecx, [esp + arg_98]
+0x8049dcc	mov	[esp + arg_90], eax
+0x8049dd3	mov	eax, [esp + arg_94]
+0x8049dda	or	ecx, eax
+0x8049ddc	mov	eax, [esp + arg_90]
+0x8049de3	or	eax, ecx
+0x8049de5	and	edx, edi
+0x8049de7	and	edx, esi
+0x8049de9	mov	ecx, [esp + arg_a0]
+0x8049df0	and	ecx, ebx
+0x8049df2	and	ecx, esi
+0x8049df4	mov	ebx, [esp + arg_a0]
+0x8049dfb	and	ebx, edi
+0x8049dfd	mov	[esp + arg_8c], eax
+0x8049e04	mov	eax, [esp + arg_a4]
+0x8049e0b	and	ebx, eax
+0x8049e0d	mov	eax, [esp + arg_a0]
+0x8049e14	and	eax, edi
+0x8049e16	and	eax, esi
+0x8049e18	or	edx, ecx
+0x8049e1a	or	ebx, eax
+0x8049e1c	or	edx, ebx
+0x8049e1e	mov	eax, edx
+0x8049e20	xor	eax, 0x1
+0x8049e23	mov	ecx, [esp + arg_3b8]
+0x8049e2a	shr	ecx, 0x1e
+0x8049e2d	and	ecx, 0x1
+0x8049e30	mov	esi, ecx
+0x8049e32	xor	esi, 0x1
+0x8049e35	mov	edi, [esp + arg_3c8]
+0x8049e3c	shr	edi, 0x1e
+0x8049e3f	and	edi, 0x1
+0x8049e42	mov	ebx, edi
+0x8049e44	xor	ebx, 0x1
+0x8049e47	mov	[esp + arg_88], eax
+0x8049e4e	mov	eax, esi
+0x8049e50	and	eax, edi
+0x8049e52	mov	[esp + arg_84], ecx
+0x8049e59	mov	ecx, [esp + arg_88]
+0x8049e60	and	eax, ecx
+0x8049e62	mov	ecx, [esp + arg_84]
+0x8049e69	and	ecx, ebx
+0x8049e6b	mov	[esp + arg_80], eax
+0x8049e72	mov	eax, [esp + arg_88]
+0x8049e79	and	ecx, eax
+0x8049e7b	mov	eax, esi
+0x8049e7d	and	eax, ebx
+0x8049e7f	and	eax, edx
+0x8049e81	mov	[esp + arg_7c], eax
+0x8049e85	mov	eax, [esp + arg_84]
+0x8049e8c	and	eax, edi
+0x8049e8e	and	eax, edx
+0x8049e90	mov	[esp + arg_78], eax
+0x8049e94	mov	eax, [esp + arg_80]
+0x8049e9b	or	eax, ecx
+0x8049e9d	mov	ecx, [esp + arg_7c]
+0x8049ea1	mov	[esp + arg_74], eax
+0x8049ea5	mov	eax, [esp + arg_78]
+0x8049ea9	or	ecx, eax
+0x8049eab	mov	eax, [esp + arg_74]
+0x8049eaf	or	eax, ecx
+0x8049eb1	and	esi, edi
+0x8049eb3	and	esi, edx
+0x8049eb5	mov	ecx, [esp + arg_84]
+0x8049ebc	and	ecx, ebx
+0x8049ebe	and	ecx, edx
+0x8049ec0	mov	ebx, [esp + arg_84]
+0x8049ec7	and	ebx, edi
+0x8049ec9	mov	[esp + arg_70], eax
+0x8049ecd	mov	eax, [esp + arg_88]
+0x8049ed4	and	ebx, eax
+0x8049ed6	mov	eax, [esp + arg_84]
+0x8049edd	and	eax, edi
+0x8049edf	and	eax, edx
+0x8049ee1	or	esi, ecx
+0x8049ee3	or	ebx, eax
+0x8049ee5	or	esi, ebx
+0x8049ee7	mov	eax, esi
+0x8049ee9	xor	eax, 0x1
+0x8049eec	mov	ecx, [esp + arg_3b8]
+0x8049ef3	shr	ecx, 0x1f
+0x8049ef6	and	ecx, 0x1
+0x8049ef9	mov	edx, ecx
+0x8049efb	xor	edx, 0x1
+0x8049efe	mov	edi, [esp + arg_3c8]
+0x8049f05	shr	edi, 0x1f
+0x8049f08	and	edi, 0x1
+0x8049f0b	mov	ebx, edi
+0x8049f0d	xor	ebx, 0x1
+0x8049f10	mov	[esp + arg_6c], eax
+0x8049f14	mov	eax, edx
+0x8049f16	and	eax, edi
+0x8049f18	mov	[esp + arg_68], ecx
+0x8049f1c	mov	ecx, [esp + arg_6c]
+0x8049f20	and	eax, ecx
+0x8049f22	mov	ecx, [esp + arg_68]
+0x8049f26	and	ecx, ebx
+0x8049f28	mov	[esp + arg_64], eax
+0x8049f2c	mov	eax, [esp + arg_6c]
+0x8049f30	and	ecx, eax
+0x8049f32	and	edx, ebx
+0x8049f34	and	edx, esi
+0x8049f36	mov	ebx, [esp + arg_68]
+0x8049f3a	and	ebx, edi
+0x8049f3c	and	ebx, esi
+0x8049f3e	mov	esi, [esp + arg_64]
+0x8049f42	or	esi, ecx
+0x8049f44	or	edx, ebx
+0x8049f46	or	esi, edx
+0x8049f48	shl	ebp, 0x0
+0x8049f4b	mov	ecx, [esp + arg_39c]
+0x8049f52	shl	ecx, 0x1
+0x8049f54	mov	edx, [esp + arg_380]
+0x8049f5b	shl	edx, 0x2
+0x8049f5e	mov	edi, [esp + arg_364]
+0x8049f65	shl	edi, 0x3
+0x8049f68	mov	ebx, [esp + arg_348]
+0x8049f6f	shl	ebx, 0x4
+0x8049f72	mov	eax, [esp + arg_32c]
+0x8049f79	shl	eax, 0x5
+0x8049f7c	mov	[esp + arg_60], eax
+0x8049f80	mov	eax, [esp + arg_310]
+0x8049f87	shl	eax, 0x6
+0x8049f8a	mov	[esp + arg_5c], eax
+0x8049f8e	mov	eax, [esp + arg_2f4]
+0x8049f95	shl	eax, 0x7
+0x8049f98	mov	[esp + arg_58], eax
+0x8049f9c	mov	eax, [esp + arg_2d8]
+0x8049fa3	shl	eax, 0x8
+0x8049fa6	mov	[esp + arg_54], eax
+0x8049faa	mov	eax, [esp + arg_2bc]
+0x8049fb1	shl	eax, 0x9
+0x8049fb4	mov	[esp + arg_50], eax
+0x8049fb8	mov	eax, [esp + arg_2a0]
+0x8049fbf	shl	eax, 0xa
+0x8049fc2	mov	[esp + arg_4c], eax
+0x8049fc6	mov	eax, [esp + arg_284]
+0x8049fcd	shl	eax, 0xb
+0x8049fd0	mov	[esp + arg_48], eax
+0x8049fd4	mov	eax, [esp + arg_268]
+0x8049fdb	shl	eax, 0xc
+0x8049fde	mov	[esp + arg_44], eax
+0x8049fe2	mov	eax, [esp + arg_24c]
+0x8049fe9	shl	eax, 0xd
+0x8049fec	mov	[esp + arg_40], eax
+0x8049ff0	mov	eax, [esp + arg_230]
+0x8049ff7	shl	eax, 0xe
+0x8049ffa	mov	[esp + arg_3c], eax
+0x8049ffe	mov	eax, [esp + arg_214]
+0x804a005	shl	eax, 0xf
+0x804a008	mov	[esp + arg_38], eax
+0x804a00c	mov	eax, [esp + arg_1f8]
+0x804a013	shl	eax, 0x10
+0x804a016	mov	[esp + arg_34], eax
+0x804a01a	mov	eax, [esp + arg_1dc]
+0x804a021	shl	eax, 0x11
+0x804a024	mov	[esp + arg_30], eax
+0x804a028	mov	eax, [esp + arg_1c0]
+0x804a02f	shl	eax, 0x12
+0x804a032	mov	[esp + arg_2c], eax
+0x804a036	mov	eax, [esp + arg_1a4]
+0x804a03d	shl	eax, 0x13
+0x804a040	mov	[esp + arg_28], eax
+0x804a044	mov	eax, [esp + arg_188]
+0x804a04b	shl	eax, 0x14
+0x804a04e	mov	[esp + arg_24], eax
+0x804a052	mov	eax, [esp + arg_16c]
+0x804a059	shl	eax, 0x15
+0x804a05c	mov	[esp + arg_20], eax
+0x804a060	mov	eax, [esp + arg_150]
+0x804a067	shl	eax, 0x16
+0x804a06a	mov	[esp + arg_1c], eax
+0x804a06e	mov	eax, [esp + arg_134]
+0x804a075	shl	eax, 0x17
+0x804a078	mov	[esp + arg_18], eax
+0x804a07c	mov	eax, [esp + arg_118]
+0x804a083	shl	eax, 0x18
+0x804a086	mov	[esp + arg_14], eax
+0x804a08a	mov	eax, [esp + arg_fc]
+0x804a091	shl	eax, 0x19
+0x804a094	mov	[esp + arg_10], eax
+0x804a098	mov	eax, [esp + arg_e0]
+0x804a09f	shl	eax, 0x1a
+0x804a0a2	mov	[esp + arg_c], eax
+0x804a0a6	mov	eax, [esp + arg_c4]
+0x804a0ad	shl	eax, 0x1b
+0x804a0b0	mov	[esp + arg_8], eax
+0x804a0b4	mov	eax, [esp + arg_a8]
+0x804a0bb	shl	eax, 0x1c
+0x804a0be	mov	[esp + arg_4], eax
+0x804a0c2	mov	eax, [esp + arg_8c]
+0x804a0c9	shl	eax, 0x1d
+0x804a0cc	mov	[esp + arg_0], eax
+0x804a0cf	mov	eax, [esp + arg_70]
+0x804a0d3	shl	eax, 0x1e
+0x804a0d6	shl	esi, 0x1f
+0x804a0d9	add	ebp, ecx
+0x804a0db	add	ebp, edx
+0x804a0dd	add	ebp, edi
+0x804a0df	add	ebp, ebx
+0x804a0e1	mov	ecx, [esp + arg_60]
+0x804a0e5	add	ebp, ecx
+0x804a0e7	mov	ecx, [esp + arg_5c]
+0x804a0eb	add	ebp, ecx
+0x804a0ed	mov	ecx, [esp + arg_58]
+0x804a0f1	add	ebp, ecx
+0x804a0f3	mov	ecx, [esp + arg_54]
+0x804a0f7	add	ebp, ecx
+0x804a0f9	mov	ecx, [esp + arg_50]
+0x804a0fd	add	ebp, ecx
+0x804a0ff	mov	ecx, [esp + arg_4c]
+0x804a103	add	ebp, ecx
+0x804a105	mov	ecx, [esp + arg_48]
+0x804a109	add	ebp, ecx
+0x804a10b	mov	ecx, [esp + arg_44]
+0x804a10f	add	ebp, ecx
+0x804a111	mov	ecx, [esp + arg_40]
+0x804a115	add	ebp, ecx
+0x804a117	mov	ecx, [esp + arg_3c]
+0x804a11b	add	ebp, ecx
+0x804a11d	mov	ecx, [esp + arg_38]
+0x804a121	add	ebp, ecx
+0x804a123	mov	ecx, [esp + arg_34]
+0x804a127	add	ebp, ecx
+0x804a129	mov	ecx, [esp + arg_30]
+0x804a12d	add	ebp, ecx
+0x804a12f	mov	ecx, [esp + arg_2c]
+0x804a133	add	ebp, ecx
+0x804a135	mov	ecx, [esp + arg_28]
+0x804a139	add	ebp, ecx
+0x804a13b	mov	ecx, [esp + arg_24]
+0x804a13f	add	ebp, ecx
+0x804a141	mov	ecx, [esp + arg_20]
+0x804a145	add	ebp, ecx
+0x804a147	mov	ecx, [esp + arg_1c]
+0x804a14b	add	ebp, ecx
+0x804a14d	mov	ecx, [esp + arg_18]
+0x804a151	add	ebp, ecx
+0x804a153	mov	ecx, [esp + arg_14]
+0x804a157	add	ebp, ecx
+0x804a159	mov	ecx, [esp + arg_10]
+0x804a15d	add	ebp, ecx
+0x804a15f	mov	ecx, [esp + arg_c]
+0x804a163	add	ebp, ecx
+0x804a165	mov	ecx, [esp + arg_8]
+0x804a169	add	ebp, ecx
+0x804a16b	mov	ecx, [esp + arg_4]
+0x804a16f	add	ebp, ecx
+0x804a171	mov	ecx, [esp + arg_0]
+0x804a174	add	ebp, ecx
+0x804a176	add	ebp, eax
+0x804a178	add	ebp, esi
+0x804a17a	mov	eax, ebp
+
