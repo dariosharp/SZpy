@@ -23,7 +23,8 @@ operX86inMem = (
     )
 
 arch = {
-    32: (operX86, X86_AVX_BCAST_INVALID, X86_INS_RET, CS_MODE_32)
+    32: (operX86, X86_AVX_BCAST_INVALID, X86_INS_RET, CS_MODE_32),
+    64: (operX86, X86_AVX_BCAST_INVALID, X86_INS_RET, CS_MODE_64)
 }
 
 
@@ -40,8 +41,6 @@ class Disassembler(object):
         self.start = vbase
         self.end = vend
         self.rip = vstart - vbase
-        self.istruction = []
-        self.byte = ''
         self.arch = architecture
         self.md = Cs(CS_ARCH_X86, arch[self.arch][3])
         self.md.detail = True

@@ -1,0 +1,10 @@
+0x400da4	mov	[rbp + arg_x4], edi
+0x400da7	mov	edi, [rbp + arg_x4]
+0x400daa	add	edi, 0x2
+0x400db0	mov	[rbp + arg_x4], edi
+0x400db3	mov	edi, [rbp + arg_x4]
+0x400db6	and	edi, 0x1
+0x400dbc	mov	[rbp + arg_x4], edi
+0x400dbf	mov	edi, [rbp + arg_x4]
+0x400dc2	add	edi, 0x5
+0x400dc8	mov	[rbp + arg_x4], edi
