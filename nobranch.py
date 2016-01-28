@@ -1,4 +1,6 @@
-smt = 'boolector'
+#https://github.com/pwning/public-writeup/blob/master/9447ctf2015/re330-nobranch/nobranch.py
+
+smt = 'z3'
 
 # Define some functions for cross-compatability between z3 and boolector.
 # (When working on this challenge, I started with z3 and then switched to
