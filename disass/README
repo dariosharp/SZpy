@@ -1,0 +1,15 @@
+''' Example:'''
+
+vbase = 0x400000
+vrip = 0x0040078b
+lrip = 0x00400b2f
+dis = Disassembler(vrip, lrip, vbase, 'TestDisassembler/test64', 64)
+
+''' Print the Disassembled: '''
+
+print dis
+
+''' Store into file (this method is implemented for customize the disassembled)'''
+
+dis.store_istruction("name_ffile.txt")
+

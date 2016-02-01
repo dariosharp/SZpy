@@ -15,10 +15,10 @@ operX86inMem = (
     ((lambda i : True if i.mem.segment != 0 else False), (lambda insn, i: "%s:[" % (insn.reg_name(i.mem.segment)))),
     ((lambda i : True if i.mem.segment == 0 else False), (lambda insn, i: "[")),
     ((lambda i : True if i.mem.base != 0 else False), (lambda insn, i: "%s" % (insn.reg_name(i.mem.base)))),
-    ((lambda i : True if i.mem.index != 0 else False), (lambda insn, i: " + %s" % (insn.reg_name(i.mem.index)))),
+    ((lambda i : True if i.mem.index != 0 else False), (lambda insn, i: "%s" % (insn.reg_name(i.mem.index)))),
     ((lambda i : True if i.mem.scale != 1 else False), (lambda insn, i: "*%u" % (i.mem.scale))),
-    ((lambda i : True if i.mem.disp != 0 else False), (lambda insn, i: " + arg_%s" % str(hex((i.mem.disp)))[2:])),
-    ((lambda i : True if i.mem.disp == 0 else False), (lambda insn, i: " + arg_0"))
+    ((lambda i : True if i.mem.disp != 0 else False), (lambda insn, i: "+arg_%s" % str(hex((i.mem.disp)))[2:])),
+    ((lambda i : True if i.mem.disp == 0 else False), (lambda insn, i: "+arg_0"))
      
     )
 
@@ -34,7 +34,13 @@ class Disassembler(object):
     -> address of end Disassemble
     -> address of VirtAddr start
     -> file to disassemble
-    -> architecture type (32 or 64 bit)'''
+    -> architecture type (32 or 64 bit)
+    
+    ----------------------------------
+    -> store_istruction() to save disassembled into file
+    -> __str__ to ptint disassembled
+    -> decode() to iterate
+    '''
 
     def __init__(self, vstart, vend, vbase, executable, architecture) :
         self.executable = open(executable, 'rb').read()
@@ -52,19 +58,18 @@ class Disassembler(object):
         insn = next(insn)
         self.rip += insn.size
         op = ["", ""]
-        if len(insn.operands) > 0:
-            c = -1
-            for i in insn.operands:
-                c += 1
-                for (search, func) in arch[self.arch][0]:
-                    if i.type == search:
-                        op[c] += func(insn, i)
-                if i.avx_bcast != arch[self.arch][1]:
-                    op[c]="%u" % (i.avx_bcast)
-            if insn.id == arch[self.arch][2]:
-                self.end = self.rip + self.start
-            return(insn.address, insn.mnemonic, op[0], op[1])
-       
+        c = -1
+        for i in insn.operands:
+            c += 1
+            for (search, func) in arch[self.arch][0]:
+                if i.type == search:
+                    op[c] += func(insn, i)
+            if i.avx_bcast != arch[self.arch][1]:
+                op[c]="%u" % (i.avx_bcast)
+        if insn.id == arch[self.arch][2]:
+            self.end = self.rip + self.start
+        return(insn.address, insn.mnemonic, op[0], op[1])
+        
     def decode(self):
         while self.rip != (self.end - self.start):
             yield self._decode_operandos()
@@ -73,11 +78,11 @@ class Disassembler(object):
         ''' Save all istruction as string'''
         string_istruction = ''
         for add, mn, op0, op1 in self.decode():
-            string_istruction += "0x{0:x}\t{1}\t{2}, {3}\n".format(add, mn, op0, op1)
+            string_istruction += "0x{0:x} {1} {2} {3}\n".format(add, mn, op0, op1)
             open(store_file, 'wb').write(string_istruction)
 
     def __str__(self):
         string_istruction = ''
         for add, mn, op0, op1 in self.decode():
-            string_istruction += "0x{0:x}\t{1}\t{2}, {3}\n".format(add, mn, op0, op1)
+            string_istruction += "0x{0:x}\t{1}\t{2} {3}\n".format(add, mn, op0, op1)
         return string_istruction
