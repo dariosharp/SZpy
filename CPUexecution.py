@@ -1,8 +1,28 @@
-from disass.disassembler import Disassembler
 from z3 import *
+import re
+
+register64 = {
+    'rax' : None,
+    'rbx' : None,
+    'rcx' : None,
+    'rdx' : None,
+    'rsi' : None,
+    'rdi' : None,
+    'rbp' : None,
+    'rsp' : None,
+    'rip' : None,
+    'r8'  : None,
+    'r9'  : None,
+    'r10' : None,
+    'r11' : None,
+    'r12' : None,
+    'r13' : None,
+    'r14' : None,
+    'r15' : None
+}
 
 
-registerX86 = {
+register32 = {
     'eax' : None,
     'ebx' : None,
     'ecx' : None,
@@ -11,10 +31,37 @@ registerX86 = {
     'edi' : None,
     'ebp' : None,
     'esp' : None,
-    'eip' : None
+    'eip' : None,
+    'r8d'  : None,
+    'r9d'  : None,
+    'r10d' : None,
+    'r11d' : None,
+    'r12d' : None,
+    'r13d' : None,
+    'r14d' : None,
+    'r15d' : None
 }
 
 register16bit = {
+    'ax' : None,
+    'bx' : None,
+    'cx' : None,
+    'dx' : None,
+    'sx' : None,
+    'bx' : None,
+    'sx' : None,
+    'ix' : None,
+    'r8w'  : None,
+    'r9w'  : None,
+    'r10w' : None,
+    'r11w' : None,
+    'r12w' : None,
+    'r13w' : None,
+    'r14w' : None,
+    'r15w' : None
+}
+
+register8bit = {
     'al' : None,
     'bl' : None,
     'cl' : None,
@@ -22,27 +69,23 @@ register16bit = {
     'sl' : None,
     'bl' : None,
     'sl' : None,
-    'il' : None
+    'il' : None,
+    'r8b'  : None,
+    'r9b'  : None,
+    'r10b' : None,
+    'r11b' : None,
+    'r12b' : None,
+    'r13b' : None,
+    'r14b' : None,
+    'r15b' : None
 }
-
 
 class SymbolicExecutionEngine(object):
     def __init__(self, start, end, vbase, executable, arch):
-        self.ctx = {
-            'eax' : None,
-            'ebx' : None,
-            'ecx' : None,
-            'edx' : None,
-            'esi' : None,
-            'edi' : None,
-            'ebp' : None,
-            'esp' : None,
-            'eip' : None
-        }
-
+        self.ctx = register32
         self.start = start
         self.end = end
-        self.disass = Disassembler(start, end, vbase, executable, arch)
+        self.disass = open("ctf.txt")
         self.mem = {}
         self.idx = 0
         self.sym_variables = []
@@ -63,95 +106,71 @@ class SymbolicExecutionEngine(object):
         self.ctx[r] = self._push_equation(e)
 
     def get_reg_equation(self, r):
-        #print self.sym_variables
         if self._check_if_reg32(r) == False:
             return
         return self.equations[self.ctx[r]]
 
+    def memoryInstruction(self, address, mnemonic, dst, src):
+        return (src in self.ctx and (dst in self.ctx and self.ctx[src])) or \
+            (dst in self.ctx and (src[:1].isdigit() and int(src, 16))) or \
+            (dst.find('arg_') != -1 and ((src in self.ctx and ((dst not in self.mem and None) or self.ctx[src])) or (src[:1].isdigit() and int(src,16))))
+        
+        if (src.find('var_') != -1 or src.find('arg')!= -1) and dst in self.ctx:
+            if src not in self.mem:
+                sym = BitVec('arg%d' % len(self.sym_variables), 32)
+                self.sym_variables.append(sym)
+                print "{0:*>20}\t{1} {2} {3}".format(address ,mnemonic, dst, src)
+                self.mem[src] = self._push_equation(sym)
+            return self.mem[src]
+        else:
+            raise Exception('{0:*>20} {1} {2} {3:*<20} is not handled.'.format(address ,mnemonic, dst, src))
+
+    def _shr(self, dst, src):
+        self.set_reg_with_equation(dst, LShR(self.get_reg_equation(dst), int(src,16)))
+        
+    def _shl(self, dst, src):
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) << int(src, 16))
+
+    def _and(self, dst, src):
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) & ((src in self.ctx and self.get_reg_equation(src)) or int(src,16)))
+
+    def _or(self, dst, src):
+         self.set_reg_with_equation(dst, self.get_reg_equation(dst) | self.get_reg_equation(src))
+           
+    def _xor(self, dst, src):
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) ^ self.get_reg_equation(dst))
+
+    def _imul(self, dst, src):
+            self.set_reg_with_equation(dst, self.get_reg_equation(dst) * ((src in self.ctx and self.get_reg_equation(src)) or  self.mem[src]))
+            
+    def _neg(self, dst):
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) * -1)
+                    
+    def _not(self, dst, src):
+        self.set_reg_with_equation(dst, ~self.get_reg_equation(dst) & 0xFFFFFFFF)
+
+    def _sub(self, dst, src):
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) - self.get_reg_equation(src))
+        
+    def _cdqe(self, dst, src):
+        pass
+    
+    def _nop(self, dst, src):
+        print("I'm in")
+    
+    def _add(self, dst, src):
+            self.set_reg_with_equation(dst, self.get_reg_equation(dst) + ((src in self.ctx and self.get_reg_equation(src)) or int(src, 16))) 
+    
     def run(self):
         '''Run from start address to end address the engine'''
-        for address, mnemonic, dst, src in self.disass.decode():
-            if dst == 'al':
-                dst = 'eax'
-            if dst == 'cl':
-                dst = 'ecx'
-            if src == 'al':
-                src = 'eax'
-            if src == 'cl':
-                src = 'ecx'
-            if mnemonic == 'mov' or mnemonic == 'movsx':
-                # mov reg32, reg3
-                if src in self.ctx and dst in self.ctx:
-                    self.ctx[dst] = self.ctx[src]
-                # mov reg32, [mem]
-                elif (src.find('var_') != -1 or src.find('arg')!= -1) and dst in self.ctx:
-                    if src not in self.mem:
-                        #print src
-                        # A non-initialized location is trying to be read, we got a symbolic variable!
-                        sym = BitVec('arg%d' % len(self.sym_variables), 32)
-                        self.sym_variables.append(sym)
-                        print "{0}\t{1}\t{2}\t{3}".format(hex(address),mnemonic, dst, src)
-                        #print 'Trying to read a non-initialized area, we got a new symbolic variable: %s' % sym
-                        
-                        self.mem[src] = self._push_equation(sym)
-                    
-                    self.ctx[dst] = self.mem[src]
-                # mov [mem], reg32
-                elif dst.find('arg_') != -1 and src in self.ctx:
-                    if dst not in self.mem:
-                        self.mem[dst] = None
-                    self.mem[dst] = self.ctx[src]
-                else:
-                    print mnemonic, dst, src
-                    raise Exception('This encoding of "mov" is not handled.')
-            elif mnemonic == 'shr':
-                # shr reg32, cst
-                # dst, src
-                if dst in self.ctx:
-                    if type(src) == int:
-                        self.set_reg_with_equation(dst, LShR(self.get_reg_equation(dst), src))
-                    else:
-                        self.set_reg_with_equation(dst, LShR(self.get_reg_equation(dst), int(src,16)))
-                else:
-                    raise Exception('This encoding of "shr" is not handled.')
-            elif mnemonic == 'shl':
-                # shl reg32, cst
-                if dst in self.ctx:
-                    self.set_reg_with_equation(dst, self.get_reg_equation(dst) << int(src, 16))
-                else:
-                    raise Exception('This encoding of "shl" is not handled.')
-            elif mnemonic == 'and':
-                x = None
-                # and reg32, reg32
-                if src in self.ctx:
-                    x = self.get_reg_equation(src)
-                # and reg32, cst
-                else:
-                    x = int(src, 16)
-                self.set_reg_with_equation(dst, self.get_reg_equation(dst) & x)
-            elif mnemonic == 'xor':
-                # xor reg32, cst
-                if dst in self.ctx:
-                    self.set_reg_with_equation(dst, self.get_reg_equation(dst) ^ int(src, 16))
-                else:
-                    raise Exception('This encoding of "xor" is not handled.')
-            elif mnemonic == 'or':
-                # or reg32, reg32
-                if dst in self.ctx and src in self.ctx:
-                    self.set_reg_with_equation(dst, self.get_reg_equation(dst) | self.get_reg_equation(src))
-                else:
-                    raise Exception('This encoding of "or" is not handled.')
-            elif mnemonic == 'add':
-                # add reg32, reg32
-                if dst in self.ctx and src in self.ctx:
-                    self.set_reg_with_equation(dst, self.get_reg_equation(dst) + self.get_reg_equation(src))
-                elif dst in self.ctx:
-                    self.set_reg_with_equation(dst, self.get_reg_equation(dst) + int(src, 16))
-                else:
-                    raise Exception('This encoding of "add" is not handled.')
+        for line in self.disass:
+            address, mnemonic, dst, src = line.split(" ")
+            src = src[:-1]
+            print(mnemonic, dst, src)
+            if re.search("(mov)|(lea)", mnemonic):
+                self.ctx[dst] = self.memoryInstruction(address, mnemonic, dst, src)
             else:
-                print mnemonic, dst, src
-                raise Exception('This instruction is not handled.')
+                eval("_{0}({1}, {2})".format(mnemonic, dst, src))
             
     def _simplify_additions(self, eq):
         print 
@@ -162,7 +181,7 @@ class SymbolicExecutionEngine(object):
     def get_reg_equation_simplified(self, reg):
         s = Solver()
         eq = self.get_reg_equation(reg)
-        s.add(eq == 5)
+        s.add(eq == 0)
         s.check()
         return s.model()
 
