@@ -128,7 +128,7 @@ class SymbolicExecutionEngine(object):
 
         if (src.find('var_') != -1 or src.find('arg')!= -1) and dst in self.ctx:
             if src not in self.mem:
-                sym = BitVec('arg{}'.format(len(self.sym_variables)), 64)
+                sym = BitVec('arg{}'.format(len(self.sym_variables)), 32)
                 self.sym_variables.append(sym)
                 print "*** {0}\t{1} {2} {3} ***".format(address ,mnemonic, dst, src)
                 self.mem[src] = self._push_equation(sym)
@@ -153,7 +153,7 @@ class SymbolicExecutionEngine(object):
         self.set_reg_with_equation(dst, self.get_reg_equation(dst) ^  ((src[:1].isdigit() and int(src, 16)) or self.get_reg_equation(src)))
 
     def _imul(self, dst, src):
-        self.set_reg_with_equation(dst, self.get_reg_equation(dst) * ((src in self.ctx and self.ctx[src]) or  self.get_reg_equation(src)))
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) * ((src in self.ctx and self.get_reg_equation(src)) or self.mem[src]))
             
     def _neg(self, dst=None, src=None):
         self.set_reg_with_equation(dst, self.get_reg_equation(src) * -1)
@@ -184,19 +184,9 @@ class SymbolicExecutionEngine(object):
             else:
                 eval("self._{0}('{1}', '{2}')".format(mnemonic, dst, src))
             
-    def _simplify_additions(self, eq):
-        print 
-        if prove(Sum(self.sym_variables) == eq):
-            return Sum(self.sym_variables)
-        return eq
-                        
     def get_solution(self, reg, value):
         s = Solver()
         eq = self.get_reg_equation(reg)
         s.add(eq == value)
         s.check()
         return s.model()
-
-    def get_equation(self, reg):
-        s = Solver()
-        return self.get_reg_equation(reg)
