@@ -12,9 +12,9 @@ dis = Disassembler(vrip, lrip, vbase, executable, arch)
 
 ''' Print the Disassembled: '''
 
-print dis
+# print dis
 
 ''' Store into file (this method is implemented for customize the disassembled)'''
 
-dis.store_istruction("name_file.txt")
+dis.store_istruction("name_file.ds")
 
