@@ -81,11 +81,9 @@ register8bit = {
 }
 
 class SymbolicExecutionEngine(object):
-    def __init__(self, start, end, vbase, executable, arch):
+    def __init__(self, file_disass, arch):
         self.ctx = register32
-        self.start = start
-        self.end = end
-        self.disass = open("ctf.txt")
+        self.disass = open(file_disass)
         self.mem = {}
         self.idx = 0
         self.sym_variables = []
@@ -192,10 +190,10 @@ class SymbolicExecutionEngine(object):
             return Sum(self.sym_variables)
         return eq
                         
-    def get_reg_equation_simplified(self, reg):
+    def get_solution(self, reg, value):
         s = Solver()
         eq = self.get_reg_equation(reg)
-        s.add(eq == 34)
+        s.add(eq == value)
         s.check()
         return s.model()
 
