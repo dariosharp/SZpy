@@ -111,19 +111,33 @@ class SymbolicExecutionEngine(object):
         return self.equations[self.ctx[r]]
 
     def memoryInstruction(self, address, mnemonic, dst, src):
-        return (src in self.ctx and (dst in self.ctx and self.ctx[src])) or \
-            (dst in self.ctx and (src[:1].isdigit() and int(src, 16))) or \
-            (dst.find('arg_') != -1 and ((src in self.ctx and ((dst not in self.mem and None) or self.ctx[src])) or (src[:1].isdigit() and int(src,16))))
         
+        if (src in self.ctx and dst in self.ctx):
+            self.ctx[dst] = self.ctx[src]
+            return
+        
+        if (dst in self.ctx and src[:1].isdigit()):
+            self.ctx[dst] = int(src, 16)
+            return
+        
+        if (dst.find('arg_') != -1):
+            if (src in self.ctx):
+                self.mem[dst] =  self.ctx[src]
+        
+            if (src[:1].isdigit()):
+                self.mem[dst] =  int(src,16)
+            return
+
         if (src.find('var_') != -1 or src.find('arg')!= -1) and dst in self.ctx:
             if src not in self.mem:
-                sym = BitVec('arg%d' % len(self.sym_variables), 32)
+                sym = BitVec('arg{}'.format(len(self.sym_variables)), 64)
                 self.sym_variables.append(sym)
-                print "{0:*>20}\t{1} {2} {3}".format(address ,mnemonic, dst, src)
+                print "*** {0}\t{1} {2} {3} ***".format(address ,mnemonic, dst, src)
                 self.mem[src] = self._push_equation(sym)
-            return self.mem[src]
-        else:
-            raise Exception('{0:*>20} {1} {2} {3:*<20} is not handled.'.format(address ,mnemonic, dst, src))
+            self.ctx[dst] =  self.mem[src]
+            return
+        
+        raise Exception('{0:*>20} {1} {2} {3:*<20} is not handled.'.format(address ,mnemonic, dst, src))
 
     def _shr(self, dst, src):
         self.set_reg_with_equation(dst, LShR(self.get_reg_equation(dst), int(src,16)))
@@ -138,28 +152,28 @@ class SymbolicExecutionEngine(object):
          self.set_reg_with_equation(dst, self.get_reg_equation(dst) | self.get_reg_equation(src))
            
     def _xor(self, dst, src):
-        self.set_reg_with_equation(dst, self.get_reg_equation(dst) ^ self.get_reg_equation(dst))
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) ^  ((src[:1].isdigit() and int(src, 16)) or self.get_reg_equation(src)))
 
     def _imul(self, dst, src):
-            self.set_reg_with_equation(dst, self.get_reg_equation(dst) * ((src in self.ctx and self.get_reg_equation(src)) or  self.mem[src]))
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) * ((src in self.ctx and self.ctx[src]) or  self.get_reg_equation(src)))
             
-    def _neg(self, dst):
-        self.set_reg_with_equation(dst, self.get_reg_equation(dst) * -1)
+    def _neg(self, dst=None, src=None):
+        self.set_reg_with_equation(dst, self.get_reg_equation(src) * -1)
                     
-    def _not(self, dst, src):
+    def _not(self, dst, src=None):
         self.set_reg_with_equation(dst, ~self.get_reg_equation(dst) & 0xFFFFFFFF)
 
     def _sub(self, dst, src):
-        self.set_reg_with_equation(dst, self.get_reg_equation(dst) - self.get_reg_equation(src))
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) -  ((src[:1].isdigit() and int(src, 16)) or self.get_reg_equation(src)))
         
     def _cdqe(self, dst, src):
         pass
     
     def _nop(self, dst, src):
-        print("I'm in")
+        pass
     
     def _add(self, dst, src):
-            self.set_reg_with_equation(dst, self.get_reg_equation(dst) + ((src in self.ctx and self.get_reg_equation(src)) or int(src, 16))) 
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) + ((src[:1].isdigit() and int(src, 16)) or self.get_reg_equation(src))) 
     
     def run(self):
         '''Run from start address to end address the engine'''
@@ -168,9 +182,9 @@ class SymbolicExecutionEngine(object):
             src = src[:-1]
             print(mnemonic, dst, src)
             if re.search("(mov)|(lea)", mnemonic):
-                self.ctx[dst] = self.memoryInstruction(address, mnemonic, dst, src)
+                self.memoryInstruction(address, mnemonic, dst, src)
             else:
-                eval("_{0}({1}, {2})".format(mnemonic, dst, src))
+                eval("self._{0}('{1}', '{2}')".format(mnemonic, dst, src))
             
     def _simplify_additions(self, eq):
         print 
@@ -181,7 +195,7 @@ class SymbolicExecutionEngine(object):
     def get_reg_equation_simplified(self, reg):
         s = Solver()
         eq = self.get_reg_equation(reg)
-        s.add(eq == 0)
+        s.add(eq == 34)
         s.check()
         return s.model()
 

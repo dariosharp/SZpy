@@ -1,9 +1,14 @@
 ''' Example:'''
+from disassembler import *
+
+executable = 'TestDisassembler/test64'
+arch = 64
 
 vbase = 0x400000
 vrip = 0x0040078b
 lrip = 0x00400b2f
-dis = Disassembler(vrip, lrip, vbase, 'TestDisassembler/test64', 64)
+
+dis = Disassembler(vrip, lrip, vbase, executable, arch)
 
 ''' Print the Disassembled: '''
 
@@ -11,5 +16,5 @@ print dis
 
 ''' Store into file (this method is implemented for customize the disassembled)'''
 
-dis.store_istruction("name_ffile.txt")
+dis.store_istruction("name_file.txt")
 
