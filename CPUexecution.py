@@ -42,7 +42,7 @@ register32 = {
     'r15d' : None
 }
 
-register16bit = {
+register16 = {
     'ax' : None,
     'bx' : None,
     'cx' : None,
@@ -61,7 +61,7 @@ register16bit = {
     'r15w' : None
 }
 
-register8bit = {
+register8 = {
     'al' : None,
     'bl' : None,
     'cl' : None,
@@ -108,7 +108,7 @@ class SymbolicExecutionEngine(object):
             return
         return self.equations[self.ctx[r]]
 
-    def memoryInstruction(self, address, mnemonic, dst, src):
+    def memoryInstruction(self, mnemonic, dst, src):
         
         if (src in self.ctx and dst in self.ctx):
             self.ctx[dst] = self.ctx[src]
@@ -128,15 +128,22 @@ class SymbolicExecutionEngine(object):
 
         if (src.find('var_') != -1 or src.find('arg')!= -1) and dst in self.ctx:
             if src not in self.mem:
-                sym = BitVec('arg{}'.format(len(self.sym_variables)), 32)
+                sym = BitVec('arg{}'.format(len(self.sym_variables)), ((dst in register64 and 64) or (dst in register32 and 32)
+                                                                       or (dst in register16 and 16) or (dst in register8 and 8)))
                 self.sym_variables.append(sym)
-                print "*** {0}\t{1} {2} {3} ***".format(address ,mnemonic, dst, src)
+                print "*** {0} {1} {2} ***".format(mnemonic, dst, src)
                 self.mem[src] = self._push_equation(sym)
             self.ctx[dst] =  self.mem[src]
             return
         
-        raise Exception('{0:*>20} {1} {2} {3:*<20} is not handled.'.format(address ,mnemonic, dst, src))
+        raise Exception('{:*>20} {0} {1} {2:*<20} is not handled.'.format(mnemonic, dst, src))
 
+    def _mov(self, dst, src):
+        self.memoryInstruction("mov", dst, src)
+        
+    def _lea(self, dst, src):
+        self.memoryInstruction("mov", dst, src)
+            
     def _shr(self, dst, src):
         self.set_reg_with_equation(dst, LShR(self.get_reg_equation(dst), int(src,16)))
         
@@ -179,10 +186,7 @@ class SymbolicExecutionEngine(object):
             address, mnemonic, dst, src = line.split(" ")
             src = src[:-1]
             # print(mnemonic, dst, src)
-            if re.search("(mov)|(lea)", mnemonic):
-                self.memoryInstruction(address, mnemonic, dst, src)
-            else:
-                eval("self._{0}('{1}', '{2}')".format(mnemonic, dst, src))
+            eval("self._{0}('{1}', '{2}')".format(mnemonic, dst, src))
             
     def get_solution(self, reg, value):
         s = Solver()
