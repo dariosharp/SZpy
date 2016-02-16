@@ -82,7 +82,7 @@ register8 = {
 
 class SymbolicExecutionEngine(object):
     def __init__(self, file_disass, arch):
-        self.ctx = register32
+        self.ctx = (arch == 64 and register64) or register32
         self.disass = open(file_disass)
         self.mem = {}
         self.idx = 0
@@ -143,7 +143,10 @@ class SymbolicExecutionEngine(object):
         
     def _lea(self, dst, src):
         self.memoryInstruction("mov", dst, src)
-            
+
+    def _movsx(self, dst, src):
+        self.memoryInstruction("mov", dst, src)
+        
     def _shr(self, dst, src):
         self.set_reg_with_equation(dst, LShR(self.get_reg_equation(dst), int(src,16)))
         
@@ -181,12 +184,10 @@ class SymbolicExecutionEngine(object):
         self.set_reg_with_equation(dst, self.get_reg_equation(dst) + ((src[:1].isdigit() and int(src, 16)) or self.get_reg_equation(src))) 
     
     def run(self):
-        '''Run from start address to end address the engine'''
         for line in self.disass:
             address, mnemonic, dst, src = line.split(" ")
-            src = src[:-1]
             # print(mnemonic, dst, src)
-            eval("self._{0}('{1}', '{2}')".format(mnemonic, dst, src))
+            eval("self._{0}('{1}', '{2}')".format(mnemonic, dst, src[:-1]))
             
     def get_solution(self, reg, value):
         s = Solver()
