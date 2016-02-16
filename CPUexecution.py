@@ -178,7 +178,7 @@ class SymbolicExecutionEngine(object):
         for line in self.disass:
             address, mnemonic, dst, src = line.split(" ")
             src = src[:-1]
-            print(mnemonic, dst, src)
+            # print(mnemonic, dst, src)
             if re.search("(mov)|(lea)", mnemonic):
                 self.memoryInstruction(address, mnemonic, dst, src)
             else:
