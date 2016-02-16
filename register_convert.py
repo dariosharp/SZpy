@@ -79,7 +79,7 @@ r8 = {
 
 
 
-class register64:
+class register:
     def __init__(self, r):
         self._r = r
         
