@@ -91,7 +91,7 @@ r8 = {
 
 
 class register:
-    def __init__(self, r):
+    def __init__(self, r=r64):
         self._r = r
         
     def __setitem__(self, key, value):

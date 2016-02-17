@@ -1,8 +1,22 @@
 from imp import reload
+from CPUexecution import SymbolicExecutionEngine
 from register_convert import *
+
 import unittest
 
-class Test_register(unittest.TestCase):
+class Tester_CPU(unittest.TestCase):
+    def test_number(self):
+        sym = SymbolicExecutionEngine("Test/number_test.ds")
+        sym.run()
+        m = sym.get_solution('esi', 1)
+        self.assertEqual(str(m), "[arg1 = 1, arg0 = 1749801491]")
+
+    def test_string(self):
+        sym = SymbolicExecutionEngine("Test/string_test.ds")
+        sym.run()
+        # m = sym.get_solution('esi', 1)
+        # self.assertEqual(str(m), "[arg1 = 1, arg0 = 1749801491]")
+        
     def test_eax(self):
         status = register(r64)
         status['eax'] = 10
@@ -22,8 +36,8 @@ class Test_register(unittest.TestCase):
         status = register(r64)
         status['rdx'] = 10
         self.assertEqual(status['edx'], 10)
+
+
         
-
-
 if __name__=='__main__':
     unittest.main()
