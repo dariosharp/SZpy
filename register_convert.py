@@ -101,9 +101,10 @@ class register:
         self._r[key] = value
         
     def __getitem__(self, key):
-        return (key in r32 and self.get32(key)) or \
+        return (key in r64 and self._r[key]) or \
+            (key in r32 and self.get32(key)) or \
             (key in r16 and self.get16(key)) or \
-            (key in r8 and self.get8(key)) or self._r[key]
+            (key in r8 and self.get8(key)) 
 
     
     def set32(self, key, value):
