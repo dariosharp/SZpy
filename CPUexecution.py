@@ -108,6 +108,22 @@ class SymbolicExecutionEngine(object):
     def get_solution(self, reg, value):
         s = Solver()
         eq = self.get_reg_equation(reg)
+        print self.equations
         s.add(eq == value)
         s.check()
         return s.model()
+    
+    def clear_dict(self, d):
+        for i in range(0, len(d), 2):
+            del d[i]
+        return d
+                    
+
+    def get_string_solution(self, output):
+        s = Solver()
+        eq = self.equations
+        eq = self.clear_dict(eq)
+        s.add(*[eq[x]== ord(y) for x, y in zip(eq, output)])
+        print s
+        print s.model()
+        
