@@ -15,7 +15,6 @@ class instruction:
         if (dst.find('arg_') != -1):
             if (src in allreg):
                 self.mem[dst] =  self.ctx[src]
-        
             if (src[:1].isdigit()):
                 self.mem[dst] =  int(src,16)
             return
@@ -54,7 +53,7 @@ class instruction:
          self.set_reg_with_equation(dst, self.get_reg_equation(dst) | self.get_reg_equation(src))
            
     def _xor(self, dst, src):
-        self.set_reg_with_equation(dst, self.get_reg_equation(dst) ^  ((src[:1].isdigit() and int(src, 16)) or self.get_reg_equation(src)))
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) ^ ((src[:1].isdigit() and int(src, 16)) or self.get_reg_equation(src)))
 
     def _imul(self, dst, src):
         self.set_reg_with_equation(dst, self.get_reg_equation(dst) * ((src in allreg and self.get_reg_equation(src)) or self.mem[src]))
@@ -66,7 +65,7 @@ class instruction:
         self.set_reg_with_equation(dst, ~self.get_reg_equation(dst) & 0xFFFFFFFF)
 
     def _sub(self, dst, src):
-        self.set_reg_with_equation(dst, self.get_reg_equation(dst) -  ((src[:1].isdigit() and int(src, 16)) or self.get_reg_equation(src)))
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) - ((src[:1].isdigit() and int(src, 16)) or self.get_reg_equation(src)))
         
     def _cdqe(self, dst, src):
         pass

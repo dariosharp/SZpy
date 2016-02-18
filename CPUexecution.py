@@ -36,16 +36,11 @@ class SymbolicExecutionEngine(instruction):
         s.add(eq == value)
         s.check()
         return s.model()
-    
-    def clear_dict(self, d):
-        for i in range(0, len(d), 2):
-            del d[i]
-        return d
-                    
+       
 
-    def get_string_solution(self, output):
+    def get_string_solution(self, output, value):
         s = Solver()
-        eq = self.clear_dict(self.equations)
-        s.add(*[eq[x]== ord(y) for x, y in zip(eq, output)])
+        eq = [self.equations[self.mem[i]] for i in output]
+        s.add(*[ x == ord(y) for x, y in zip(eq, value)])
         s.check()
         return s.model()

@@ -109,27 +109,27 @@ class register:
     
     def set32(self, key, value):
         value += (self._r[r32[key]] != None and
-                  self._r[r32[key]] & 0xFFFFFFFF00000000) or 0
+                  self._r[r32[key]] & 0xFFFFFFFF00000000)
         return (r32[key], value)
     
     def get32(self, key):
         return (self._r[r32[key]] != None \
-                and self._r[r32[key]] & 0xFFFFFFFF) or None 
+                and self._r[r32[key]] & 0xFFFFFFFF) 
 
     def set16(self, key, value):
         value += (self._r[r16[key]] != None and
-                  self._r[r16[key]] & 0xFFFFFFFFFFFF0000) or 0
-        return key, value
+                  self._r[r16[key]] & 0xFFFFFFFFFFFF0000)
+        return (r16[key], value)
     
     def get16(self, key):
         return (self._r[r16[key]] != None
-                and self._r[r16[key]] & 0xFFFF) or None 
+                and self._r[r16[key]] & 0xFFFF) 
 
     def set8(self, key, value):
         value += (self._r[r8[key]] != None and
-                  self._r[r8[key]] & 0xFFFFFFFFFFFFFF00) or 0
-        return key, value
+                  self._r[r8[key]] & 0xFFFFFFFFFFFFFF00)
+        return (r8[key], value)
     
     def get8(self, key):
         return (self._r[r8[key]] != None
-                and self._r[r8[key]] & 0xFF) or None 
+                and self._r[r8[key]] & 0xFF) 

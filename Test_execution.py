@@ -14,8 +14,10 @@ class Tester_CPU(unittest.TestCase):
     def test_string(self):
         sym = SymbolicExecutionEngine("Test/string_test.ds")
         sym.run()
-        # m = sym.get_solution('esi', 1)
-        # self.assertEqual(str(m), "[arg1 = 1, arg0 = 1749801491]")
+        output = ['[rdi+arg_0]', '[rdi+arg_1]', '[rdi+arg_2]']
+        m = sym.get_string_solution(output, "@@@")
+        self.assertEqual(str(m), '[arg2 = 64, arg1 = 64, arg0 = 64]')
+        
         
     def test_eax(self):
         status = register(r64)
