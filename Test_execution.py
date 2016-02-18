@@ -3,8 +3,8 @@
 from imp import reload
 from CPUexecution import SymbolicExecutionEngine
 from register_convert import *
-
 import unittest
+
 
 class Tester_CPU(unittest.TestCase):
     def test_number(self):
@@ -19,7 +19,13 @@ class Tester_CPU(unittest.TestCase):
         output = ['[rdi+arg_0]', '[rdi+arg_1]', '[rdi+arg_2]']
         m = sym.get_string_solution(output, "@@@")
         self.assertEqual(str(m), '[arg2 = 64, arg1 = 64, arg0 = 64]')
-        
+
+    def test_string_buffer(self):
+        sym = SymbolicExecutionEngine("Test/string_single_buffer.ds")
+        sym.run()
+        output = ['[rdi+arg_0]', '[rdi+arg_1]', '[rdi+arg_2]', "[rdi+arg_3]", "[rdi+arg_4]"]
+        m = sym.get_string_solution(output, "jDcCQ")
+        self.assertEqual(str(m), '[arg1 = 34, arg0 = 97, arg2 = 99]')
         
     def test_eax(self):
         status = register(r64)
@@ -40,7 +46,6 @@ class Tester_CPU(unittest.TestCase):
         status = register(r64)
         status['rdx'] = 10
         self.assertEqual(status['edx'], 10)
-
 
         
 if __name__=='__main__':
