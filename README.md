@@ -11,7 +11,7 @@ For all news follow me @dariosharp
 #	Execution Example	#
 #				#
 #################################
-
+'''
 from imp import reload
 from CPUexecution import SymbolicExecutionEngine
 
@@ -27,3 +27,4 @@ def test_string():
 
 if __name__=='__main__':
     test_string()
+'''
