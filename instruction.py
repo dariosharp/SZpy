@@ -41,7 +41,10 @@ class instruction:
 
     def _movsx(self, dst, src):
         self.memoryInstruction("mov", dst, src)
-        
+
+    def _movzx(self, dst, src):
+        self.memoryInstruction("mov", dst, src)
+    
     def _shr(self, dst, src):
         self.set_reg_with_equation(dst, LShR(self.get_reg_equation(dst), int(src,16)))
         
