@@ -1,3 +1,5 @@
+#!/usr/bin/python2.7 
+
 
 allreg = [ 'rax', 'rbx', 'rcx','rdx','rsi','rdi', 'rbp', 'rsp', 'rip', 'r8',
            'r9' , 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'eax', 'ebx',
