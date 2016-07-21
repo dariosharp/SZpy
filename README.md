@@ -16,7 +16,7 @@ $ git clone https://github.com/dariosharp/SZpy.git
 Now are only supported i386 and x86-64 but will be available in the near future more architectures.
 
 ##Execution tutorial
-View `EXECUTE.me`.
+View `EXECUTE.md`.
 
 ##Contributors
 Myself [dariosharp](https://twitter.com/dariosharp), if you are interested in the project please contact me on twitter or GitHub.
