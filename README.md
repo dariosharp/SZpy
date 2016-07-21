@@ -1,30 +1,22 @@
-'''
-This tool is based on z3 with Symbolic Execution. 
 
-compile llvm: "clang -static"
+#Introduction
+SZpy is based on z3 with Symbolic Execution inspired by [Diary of a reverse-engineer](http://doar-e.github.io/). The aim of this tool is to improve the PoC present in [Breaking Kryptonite's Obfuscation: A Static Analysis Approach Relying on Symbolic Execution](http://goo.gl/FZQJPc). 
+There's a simple difference between ZSpy and the PoC: with ZSpy is possible get the input from the output of a particular function.
 
-For all news follow me @dariosharp
-'''
+###When is SZpy useful?
+Whenever a function is compiled with static llvm and you're too lazy to analyze it manually.
 
-#################################
-#				#
-#	Execution Example	#
-#				#
-#################################
+###How to get SZpy
+You need `python2.7` and if you want to use the associated disassembler you need to install [`capstone`](http://www.capstone-engine.org/) python version. Than you can clone SZpy: 
 ```
-from imp import reload
-from CPUexecution import SymbolicExecutionEngine
-
-
-def test_string():
-    sym = SymbolicExecutionEngine("Test/string_single_buffer.ds")
-    sym.run()
-    string_wanted = "jDcCQ"
-    output_buffer = ['[rdi+arg_0]', '[rdi+arg_1]', '[rdi+arg_2]', "[rdi+arg_3]", "[rdi+arg_4]"]
-    solution = sym.get_string_solution(output_buffer, string_wanted )
-    print str(solution)
-
-
-if __name__=='__main__':
-    test_string()
+$ git clone https://github.com/dariosharp/SZpy.git
 ```
+
+###Architectures
+Now are only supported i386 and x86-64 but will be available in the near future more architectures.
+
+##Execution tutorial
+View `EXECUTE.me`.
+
+##Contributors
+Myself [dariosharp](https://twitter.com/dariosharp), if you are interested in the project please contact me on twitter or GitHub.
