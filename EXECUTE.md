@@ -90,8 +90,8 @@ The solution of your problem is:
 *** mov ecx [rdi+arg_3] ***
 *** mov eax [rdi+arg_1] ***
 *** mov ecx [rdi+arg_2] ***
-[arg3 = 52, arg1 = 50, arg0 = 49, arg2 = 51]
+[arg3 = 35, arg1 = 52, arg0 = 49, arg2 = 18]
 ```
-If you order the `arg` and convert the number in char you will get the correct solution!
+If you try `./solveme $(perl -e 'print "\x31\x12\x23\x34"'` you will get the correct solution!
 
 Awesome I know. Enjoy it. 
