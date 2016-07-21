@@ -7,7 +7,7 @@ There's a simple difference between ZSpy and the PoC: with ZSpy is possible get 
 Whenever a function is compiled with static llvm and you're too lazy to analyze it manually.
 
 ###How to get SZpy
-You need `python2.7` and if you want to use the associated disassembler you need to install [`capstone`](http://www.capstone-engine.org/) python version. Than you can clone SZpy: 
+You need `python2.7` and if you want to use the associated disassembler you need to install [`capstone`](http://www.capstone-engine.org/) python version. Then you can clone SZpy: 
 ```
 $ git clone https://github.com/dariosharp/SZpy.git
 ```
