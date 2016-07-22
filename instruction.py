@@ -26,7 +26,7 @@ class instruction:
                 sym = BitVec('arg{}'.format(len(self.sym_variables)), ((dst in r64 and 64) or (dst in r32 and 32)
                                                                        or (dst in r16 and 16) or (dst in r8 and 8)))
                 self.sym_variables.append(sym)
-                print "*** {0} {1} {2} ***".format(mnemonic, dst, src)
+                # print "*** {0} {1} {2} ***".format(mnemonic, dst, src)
                 self.mem[src] = self._push_equation(sym)
             self.ctx[dst] =  self.mem[src]
             return
