@@ -20,6 +20,13 @@ class Tester_CPU(unittest.TestCase):
         m = sym.get_string_solution(output, "@@@")
         self.assertEqual(str(m), '[arg2 = 64, arg1 = 64, arg0 = 64]')
 
+    def test_solveme(self):
+        sym = SymbolicExecutionEngine("Test/solveme_edited.ds")
+        sym.run()
+        output = ['[rdi+arg_0]', '[rdi+arg_1]', '[rdi+arg_2]', "[rdi+arg_3]"]
+        m = sym.get_string_solution(output, "e+Lu")
+        self.assertEqual(str(m), '[arg2 = 18, arg3 = 35, arg1 = 52, arg0 = 49]')
+
     def test_string_buffer(self):
         sym = SymbolicExecutionEngine("Test/string_single_buffer.ds")
         sym.run()

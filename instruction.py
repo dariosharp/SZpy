@@ -47,9 +47,15 @@ class instruction:
     
     def _shr(self, dst, src):
         self.set_reg_with_equation(dst, LShR(self.get_reg_equation(dst), int(src,16)))
+
+    def _sar(self, dst, src):
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) >> int(src,16))
         
     def _shl(self, dst, src):
-        self.set_reg_with_equation(dst, self.get_reg_equation(dst) << int(src, 16))
+        self.set_reg_with_equation(dst, RotateLeft(self.get_reg_equation(dst),int(src, 16)))
+
+    def _sal(self, dst, src):
+        self.set_reg_with_equation(dst, self.get_reg_equation(dst) << int(src,16))
 
     def _and(self, dst, src):
         self.set_reg_with_equation(dst, self.get_reg_equation(dst) & ((src in allreg and self.get_reg_equation(src)) or int(src,16)))
