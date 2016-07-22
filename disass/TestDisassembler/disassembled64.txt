@@ -1,255 +1,47 @@
-0x40078b	mov	[rbp+arg_x14] edi
-0x40078e	mov	[rbp+arg_x18] esi
-0x400791	mov	[rbp+arg_x20] 0x0
-0x400798	mov	[rbp+arg_x24] 0x3
-0x40079f	mov	[rbp+arg_x28] 0x2
-0x4007a6	mov	edi [rbp+arg_x14]
-0x4007a9	mov	esi [rbp+arg_x24]
-0x4007ac	nop	 
-0x4007ad	nop	 
-0x4007ae	nop	 
-0x4007af	nop	 
-0x4007b0	nop	 
-0x4007b1	neg	eax 
-0x4007b3	sub	eax [rbp+arg_x20]
-0x4007b6	neg	eax 
-0x4007b8	mov	[rbp+arg_x20] eax
-0x4007bb	mov	edi [rbp+arg_x14]
-0x4007be	mov	esi [rbp+arg_x28]
-0x4007c1	nop	 
-0x4007c2	nop	 
-0x4007c3	nop	 
-0x4007c4	nop	 
-0x4007c5	nop	 
-0x4007c6	mov	ecx [rbp+arg_x18]
-0x4007c9	lea	edx [rcx*4+arg_0]
-0x4007d0	movsxd	rdx edx
-0x4007d3	mov	edx [rdx*4+arg_603060]
-0x4007da	lea	ecx [rcx*4+arg_3]
-0x4007e1	movsxd	rcx ecx
-0x4007e4	mov	ecx [rcx*4+arg_603060]
-0x4007eb	mov	esi edx
-0x4007ed	not	esi 
-0x4007ef	and	esi 0x6efbe94d
-0x4007f5	and	edx 0x910416b2
-0x4007fb	mov	edi ecx
-0x4007fd	not	edi 
-0x4007ff	and	edi 0x6efbe94d
-0x400805	and	ecx 0x910416b2
-0x40080b	or	edx esi
-0x40080d	or	ecx edi
-0x40080f	xor	ecx edx
-0x400811	imul	ecx eax
-0x400814	neg	ecx 
-0x400816	sub	ecx [rbp+arg_x20]
-0x400819	neg	ecx 
-0x40081b	mov	[rbp+arg_x20] ecx
-0x40081e	mov	edi [rbp+arg_x14]
-0x400821	mov	esi [rbp+arg_x28]
-0x400824	nop	 
-0x400825	nop	 
-0x400826	nop	 
-0x400827	nop	 
-0x400828	nop	 
-0x400829	mov	ecx [rbp+arg_x18]
-0x40082c	lea	edx [rcx*4+arg_0]
-0x400833	neg	edx 
-0x400835	mov	r14d 0x1
-0x40083b	mov	esi 0x1
-0x400840	sub	esi edx
-0x400842	movsxd	rdx esi
-0x400845	mov	edx [rdx*4+arg_603060]
-0x40084c	lea	ecx [rcx*4+arg_3]
-0x400853	movsxd	rcx ecx
-0x400856	mov	ecx [rcx*4+arg_603060]
-0x40085d	mov	esi edx
-0x40085f	not	esi 
-0x400861	and	esi ecx
-0x400863	not	ecx 
-0x400865	and	ecx edx
-0x400867	or	ecx esi
-0x400869	imul	ecx eax
-0x40086c	add	[rbp+arg_x20] ecx
-0x40086f	mov	edi [rbp+arg_x14]
-0x400872	mov	esi [rbp+arg_x28]
-0x400875	nop	 
-0x400876	nop	 
-0x400877	nop	 
-0x400878	nop	 
-0x400879	nop	 
-0x40087a	mov	ecx [rbp+arg_x18]
-0x40087d	lea	edx [rcx*4+arg_2]
-0x400884	movsxd	rdx edx
-0x400887	mov	edx [rdx*4+arg_603060]
-0x40088e	lea	ecx [rcx*4+arg_3]
-0x400895	movsxd	rcx ecx
-0x400898	mov	ecx [rcx*4+arg_603060]
-0x40089f	mov	esi edx
-0x4008a1	not	esi 
-0x4008a3	and	esi 0x43b37b1
-0x4008a9	and	edx 0xfbc4c84e
-0x4008af	mov	edi ecx
-0x4008b1	not	edi 
-0x4008b3	and	edi 0x43b37b1
-0x4008b9	and	ecx 0xfbc4c84e
-0x4008bf	or	edx esi
-0x4008c1	or	ecx edi
-0x4008c3	xor	ecx edx
-0x4008c5	imul	ecx eax
-0x4008c8	mov	r9d [rbp+arg_x20]
-0x4008cc	neg	ecx 
-0x4008ce	sub	r9d ecx
-0x4008d1	mov	[rbp+arg_x20] r9d
-0x4008d5	mov	ecx [rbp+arg_x18]
-0x4008d8	lea	edx [rcx*4+arg_0]
-0x4008df	movsxd	rdx edx
-0x4008e2	mov	esi [rdx*4+arg_603060]
-0x4008e9	mov	edi esi
-0x4008eb	not	edi 
-0x4008ed	and	edi 0x59c0dd4b
-0x4008f3	and	esi 0xa63f22b4
-0x4008f9	lea	ecx [rcx*4+arg_3]
-0x400900	movsxd	rcx ecx
-0x400903	mov	r8d [rcx*4+arg_603060]
-0x40090b	mov	ebx r8d
-0x40090e	not	ebx 
-0x400910	mov	ecx ebx
-0x400912	and	ecx 0x59c0dd4b
-0x400918	mov	eax r8d
-0x40091b	and	eax 0xa63f22b4
-0x400920	or	esi edi
-0x400922	or	eax ecx
-0x400924	xor	eax esi
-0x400926	neg	edx 
-0x400928	sub	r14d edx
-0x40092b	movsxd	rcx r14d
-0x40092e	mov	ecx [rcx*4+arg_603060]
-0x400935	mov	edx ecx
-0x400937	not	edx 
-0x400939	and	edx 0xba0892cf
-0x40093f	and	ecx 0x45f76d30
-0x400945	and	ebx 0xba0892cf
-0x40094b	and	r8d 0x45f76d30
-0x400952	or	ecx edx
-0x400954	or	r8d ebx
-0x400957	xor	r8d ecx
-0x40095a	imul	r8d eax
-0x40095e	imul	r8d [rbp+arg_x14]
-0x400963	add	r8d r9d
-0x400966	mov	[rbp+arg_x20] r8d
-0x40096a	mov	r9d [rbp+arg_x18]
-0x40096e	lea	eax [r9*4+arg_0]
-0x400976	neg	eax 
-0x400978	mov	ecx 0x2
-0x40097d	sub	ecx eax
-0x40097f	movsxd	rax ecx
-0x400982	mov	ecx [rax*4+arg_603060]
-0x400989	mov	esi ecx
-0x40098b	not	esi 
-0x40098d	and	esi 0xefd60ec8
-0x400993	and	ecx 0x1029f137
-0x400999	lea	eax [r9*4+arg_3]
-0x4009a1	cdqe	 
-0x4009a3	mov	eax [rax*4+arg_603060]
-0x4009aa	mov	edi eax
-0x4009ac	not	edi 
-0x4009ae	mov	ebx edi
-0x4009b0	and	ebx 0xefd60ec8
-0x4009b6	mov	edx eax
-0x4009b8	and	edx 0x1029f137
-0x4009be	or	ecx esi
-0x4009c0	or	edx ebx
-0x4009c2	xor	edx ecx
-0x4009c4	lea	ecx [r9*4+arg_1]
-0x4009cc	movsxd	rcx ecx
-0x4009cf	mov	ecx [rcx*4+arg_603060]
-0x4009d6	mov	esi ecx
-0x4009d8	not	esi 
-0x4009da	and	esi 0x6f5bef81
-0x4009e0	and	ecx 0x90a4107e
-0x4009e6	and	edi 0x6f5bef81
-0x4009ec	and	eax 0x90a4107e
-0x4009f1	or	ecx esi
-0x4009f3	or	eax edi
-0x4009f5	xor	eax ecx
-0x4009f7	imul	eax edx
-0x4009fa	imul	eax [rbp+arg_x14]
-0x4009fe	neg	eax 
-0x400a00	sub	r8d eax
-0x400a03	mov	[rbp+arg_x20] r8d
-0x400a07	mov	r9d [rbp+arg_x18]
-0x400a0b	lea	ecx [r9*4+arg_0]
-0x400a13	movsxd	rcx ecx
-0x400a16	mov	ecx [rcx*4+arg_603060]
-0x400a1d	mov	edx ecx
-0x400a1f	not	edx 
-0x400a21	and	edx 0x50c0d70d
-0x400a27	and	ecx 0xaf3f28f2
-0x400a2d	lea	esi [r9*4+arg_3]
-0x400a35	movsxd	rsi esi
-0x400a38	mov	eax [rsi*4+arg_603060]
-0x400a3f	mov	edi eax
-0x400a41	not	edi 
-0x400a43	mov	ebx edi
-0x400a45	and	ebx 0x50c0d70d
-0x400a4b	mov	esi eax
-0x400a4d	and	esi 0xaf3f28f2
-0x400a53	or	ecx edx
-0x400a55	or	esi ebx
-0x400a57	xor	esi ecx
-0x400a59	lea	ecx [r9*4+arg_2]
-0x400a61	movsxd	rcx ecx
-0x400a64	mov	ecx [rcx*4+arg_603060]
-0x400a6b	mov	edx ecx
-0x400a6d	not	edx 
-0x400a6f	and	edx eax
-0x400a71	and	edi ecx
-0x400a73	or	edi edx
-0x400a75	imul	edi esi
-0x400a78	imul	edi [rbp+arg_x14]
-0x400a7c	neg	edi 
-0x400a7e	sub	r8d edi
-0x400a81	mov	[rbp+arg_x20] r8d
-0x400a85	mov	r9d [rbp+arg_x18]
-0x400a89	lea	eax [r9*4+arg_0]
-0x400a91	cdqe	 
-0x400a93	mov	r10d [rax*4+arg_603060]
-0x400a9b	mov	ecx r10d
-0x400a9e	not	ecx 
-0x400aa0	lea	eax [r9*4+arg_3]
-0x400aa8	cdqe	 
-0x400aaa	mov	eax [rax*4+arg_603060]
-0x400ab1	and	ecx eax
-0x400ab3	mov	esi eax
-0x400ab5	not	esi 
-0x400ab7	and	r10d esi
-0x400aba	or	r10d ecx
-0x400abd	lea	ecx [r9*4+arg_1]
-0x400ac5	movsxd	rcx ecx
-0x400ac8	mov	ecx [rcx*4+arg_603060]
-0x400acf	mov	ebx ecx
-0x400ad1	not	ebx 
-0x400ad3	and	ebx 0x73e6034a
-0x400ad9	and	ecx 0x8c19fcb5
-0x400adf	mov	edx esi
-0x400ae1	and	edx 0x73e6034a
-0x400ae7	mov	edi eax
-0x400ae9	and	edi 0x8c19fcb5
-0x400aef	or	ecx ebx
-0x400af1	or	edi edx
-0x400af3	xor	edi ecx
-0x400af5	imul	edi r10d
-0x400af9	lea	ecx [r9*4+arg_2]
-0x400b01	movsxd	rcx ecx
-0x400b04	mov	ecx [rcx*4+arg_603060]
-0x400b0b	mov	edx ecx
-0x400b0d	not	edx 
-0x400b0f	and	edx 0xac23efc0
-0x400b15	and	ecx 0x53dc103f
-0x400b1b	and	esi 0xac23efc0
-0x400b21	and	eax 0x53dc103f
-0x400b26	or	ecx edx
-0x400b28	or	eax esi
-0x400b2a	xor	eax ecx
-0x400b2c	imul	eax edi
-
+0x4005d0 push rbp 
+0x4005d1 mov rbp rsp
+0x4005d4 mov [rbp+arg_x8] rdi
+0x4005d8 mov rdi [rbp+arg_x8]
+0x4005dc movsx eax [rdi+arg_0]
+0x4005df mov rdi [rbp+arg_x8]
+0x4005e3 movsx ecx [rdi+arg_3]
+0x4005e7 add eax ecx
+0x4005e9 mov dl al
+0x4005eb mov rdi [rbp+arg_x8]
+0x4005ef mov [rdi+arg_0] dl
+0x4005f1 mov rdi [rbp+arg_x8]
+0x4005f5 movsx eax [rdi+arg_1]
+0x4005f9 shl eax 0x3
+0x4005fc mov rdi [rbp+arg_x8]
+0x400600 movsx ecx [rdi+arg_0]
+0x400603 sub eax ecx
+0x400605 mov dl al
+0x400607 mov rdi [rbp+arg_x8]
+0x40060b mov [rdi+arg_1] dl
+0x40060e mov rdi [rbp+arg_x8]
+0x400612 movsx eax [rdi+arg_1]
+0x400616 mov rdi [rbp+arg_x8]
+0x40061a movsx ecx [rdi+arg_0]
+0x40061d or eax ecx
+0x40061f mov rdi [rbp+arg_x8]
+0x400623 movsx ecx [rdi+arg_2]
+0x400627 xor ecx 0xffffffff
+0x40062d and eax ecx
+0x40062f mov dl al
+0x400631 mov rdi [rbp+arg_x8]
+0x400635 mov [rdi+arg_2] dl
+0x400638 mov rdi [rbp+arg_x8]
+0x40063c movsx eax [rdi+arg_3]
+0x400640 sar eax 0x1
+0x400643 mov rdi [rbp+arg_x8]
+0x400647 movsx ecx [rdi+arg_0]
+0x40064a add eax ecx
+0x40064c mov rdi [rbp+arg_x8]
+0x400650 movsx ecx [rdi+arg_1]
+0x400654 sar ecx 0x2
+0x400657 sub eax ecx
+0x400659 mov dl al
+0x40065b mov rdi [rbp+arg_x8]
+0x40065f mov [rdi+arg_3] dl
+0x400662 mov rax [rbp+arg_x8]
+0x400666 pop rbp 
