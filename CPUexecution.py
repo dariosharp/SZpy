@@ -38,11 +38,14 @@ class SymbolicExecutionEngine(instruction):
         s.add(eq == value)
         s.check()
         return s.model()
-       
 
-    def get_string_solution(self, output, value):
+    def get_solver(self, output, value):
         s = Solver()
         eq = [self.equations[self.mem[i]] for i in output]
         s.add(*[ x == ord(y) for x, y in zip(eq, value)])
+        return s
+
+    def get_string_solution(self, output, value):
+        s = self.get_solver(output, value)
         s.check()
         return s.model()
