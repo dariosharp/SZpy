@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 }
   ```
   
-  If you compile C code with `clang -static solveme.c -o solveme` (you can find the compiled C file in SZpy/disass/TestDisassembler/solveme) and disassembly it you will see that the function `manipolation` will be very boring to reverse. Therefore It's necessary use SZpy.
+  If you compile C code with `clang solveme.c -o solveme` (you can find the compiled C file in SZpy/disass/TestDisassembler/solveme) and disassembly it you will see that the function `manipolation` will be very boring to reverse. Therefore It's necessary use SZpy.
   
 ##How to start
   It's fondamental to find the start and end address of function that you want to solve. In the solveme the `manipolation` function starts on 0x00401060 and end on 0x004010f7.
@@ -49,8 +49,8 @@ from imp import reload
 
 def dis():
     vbase = 0x00400000
-    start = 0x00401060
-    end = 0x004010f7
+    start = 0x004005d0
+    end = 0x00400667
     dis = Disassembler(start, end, vbase, 'disass/TestDisassembler/solveme', 64)
     dis.store_istruction("Test/solveme.ds")
 
@@ -64,7 +64,7 @@ if __name__=="__main__":
 It's common remove unnecessary instructions like `push rbp; mov rbp rsp;` and `pop rbp;`.
 SZpy sometimes automatically understands where is the location of the strings that you want solve, but sometimes it need your help. 
 SZpy looks in `mov` where the source location is not setted, like `mov rdi [rbp+arg_x8]` if `[rbp+arg_x8]` not setted before.
-For solveme.ds is only necessary remove `push rbp; mov rbp rsp;` and `pop rbp;` and rename it in solveme_edited.ds. 
+For solveme.ds is only necessary remove `push rbp; mov rbp rsp;` and `pop rbp;` and rename it in SZpy/Test/solveme_edited.ds. 
 
 ##Lets start the automatic resolver
 ```
@@ -86,10 +86,6 @@ if __name__=='__main__':
 ```
 The solution of your problem is:
 ```
-*** mov eax [rdi+arg_0] ***
-*** mov ecx [rdi+arg_3] ***
-*** mov eax [rdi+arg_1] ***
-*** mov ecx [rdi+arg_2] ***
 [arg3 = 35, arg1 = 52, arg0 = 49, arg2 = 18]
 ```
 If you try `./solveme $(perl -e 'print "\x31\x12\x23\x34"'` you will get the correct solution!
