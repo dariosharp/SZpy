@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
   If you compile C code with `clang solveme.c -o solveme` (you can find the compiled C file in SZpy/disass/TestDisassembler/solveme) and disassembly it you will see that the function `manipolation` will be very boring to reverse. Therefore It's necessary use SZpy.
   
 ##How to start
-  It's fondamental to find the start and end address of function that you want to solve. In the solveme the `manipolation` function starts on 0x00401060 and end on 0x004010f7.
+  It's fondamental to find the start and end address of function that you want to solve. In the solveme the `manipolation` function starts on 0x004005d0 and end on 0x00400667.
   Ok now It's possible create a file containing the disassembly of this function. Lets do it with included disassembler:
   ```
 #!/usr/bin/python2.7 disassSolveme.py
