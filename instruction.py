@@ -23,7 +23,7 @@ class instruction:
 
         if (src.find('var_') != -1 or src.find('arg')!= -1) and dst in allreg:
             if src not in self.mem:
-                sym = BitVec('arg{}'.format(len(self.sym_variables)), ((dst in r64 and 64) or (dst in r32 and 32)
+                sym = BitVec('arg{}'.format((src.split("_")[1])[:-1]), ((dst in r64 and 64) or (dst in r32 and 32)
                                                                        or (dst in r16 and 16) or (dst in r8 and 8)))
                 self.sym_variables.append(sym)
                 # print "*** {0} {1} {2} ***".format(mnemonic, dst, src)

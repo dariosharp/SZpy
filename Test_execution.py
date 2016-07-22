@@ -11,7 +11,7 @@ class Tester_CPU(unittest.TestCase):
         sym = SymbolicExecutionEngine("Test/number_test.ds")
         sym.run()
         m = sym.get_solution('esi', 1)
-        self.assertEqual(str(m), "[arg1 = 1, arg0 = 1749801491]")
+        self.assertEqual(str(m), "[argx4 = 1, argx8 = 1749801491]")
 
     def test_string(self):
         sym = SymbolicExecutionEngine("Test/string_test.ds")
@@ -25,7 +25,7 @@ class Tester_CPU(unittest.TestCase):
         sym.run()
         output = ['[rdi+arg_0]', '[rdi+arg_1]', '[rdi+arg_2]', "[rdi+arg_3]"]
         m = sym.get_string_solution(output, "e+Lu")
-        self.assertEqual(str(m), '[arg2 = 18, arg3 = 35, arg1 = 52, arg0 = 49]')
+        self.assertEqual(str(m), '[arg1 = 18, arg2 = 35, arg3 = 52, arg0 = 49]')
 
     def test_string_buffer(self):
         sym = SymbolicExecutionEngine("Test/string_single_buffer.ds")
