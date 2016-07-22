@@ -41,3 +41,4 @@
 0x400659 mov dl al
 0x40065b mov rdi [rbp+arg_x8]
 0x40065f mov [rdi+arg_3] dl
+0x400662 mov rax [rbp+arg_x8]
