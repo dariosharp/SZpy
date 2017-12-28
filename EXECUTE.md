@@ -1,4 +1,4 @@
-##Example of challs:
+## Example of challs:
   I want to resolve this challs called solveme.c:
   ```
 #include <stdio.h>
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
   
   If you compile C code with `clang solveme.c -o solveme` (you can find the compiled C file in SZpy/disass/TestDisassembler/solveme) and disassembly it you will see that the function `manipolation` will be very boring to reverse. Therefore It's necessary use SZpy.
   
-##How to start
+## How to start
   It's fondamental to find the start and end address of function that you want to solve. In the solveme the `manipolation` function starts on 0x004005d0 and end on 0x00400667.
   Ok now It's possible create a file containing the disassembly of this function. Lets do it with included disassembler:
   ```
@@ -60,13 +60,13 @@ if __name__=="__main__":
 
   ```
   
-##Fix the disassembled
+## Fix the disassembled
 It's common remove unnecessary instructions like `push rbp; mov rbp rsp;` and `pop rbp;`.
 SZpy sometimes automatically understands where is the location of the strings that you want solve, but sometimes it need your help. 
 SZpy looks in `mov` where the source location is not setted, like `mov rdi [rbp+arg_x8]` if `[rbp+arg_x8]` not setted before.
 For solveme.ds is only necessary remove `push rbp; mov rbp rsp;` and `pop rbp;` and rename it in SZpy/Test/solveme_edited.ds. 
 
-##Lets start the automatic resolver
+## Lets start the automatic resolver
 ```
 from imp import reload
 from CPUexecution import SymbolicExecutionEngine
